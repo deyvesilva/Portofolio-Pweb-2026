@@ -3,10 +3,9 @@ from .models import Tecnologia
 
 @admin.register(Tecnologia)
 class TecnologiaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'nivel')
+    list_display = ('nome', 'nivel', 'descricao')
+
     search_fields = ('nome',)
-    list_filter = ('nivel',)
-    ordering = ('nome',)
 
     fieldsets = (
         ('Tecnologia', {
