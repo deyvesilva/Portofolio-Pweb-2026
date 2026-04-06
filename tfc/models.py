@@ -10,8 +10,7 @@ class TFC(models.Model):
 
     rating = models.IntegerField(
     validators=[MinValueValidator(1), MaxValueValidator(5)],
-    help_text="Classificação de 1 a 5"
-)
+    help_text="Classificação de 1 a 5",null=True)
 
     tecnologias = models.ManyToManyField('tecnologia.Tecnologia', blank=True)
 

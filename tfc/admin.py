@@ -4,19 +4,13 @@ from .models import TFC
 
 @admin.register(TFC)
 class TFCAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'ano', 'rating', 'mostrar_imagem')
+    list_display = ('titulo', 'descricao','rating')
 
-    readonly_fields = ('mostrar_imagem',)
 
     fieldsets = (
         ('TFC', {
-            'fields': ('titulo', 'descricao', 'ano', 'rating', 'imagem', 'mostrar_imagem')
+            'fields': ('titulo', 'descricao', 'rating')
         }),
     )
 
-    def mostrar_imagem(self, obj):
-        if obj.imagem:
-            return format_html('<img src="{}" width="100"/>', obj.imagem.url)
-        return "-"
-
-    mostrar_imagem.short_description = "Imagem"
+    

@@ -3,10 +3,10 @@ from django.db import models
 class Projeto(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.CharField(max_length=255)
-    data_inicio = models.DateField(blank=True)
+    data_inicio = models.DateField(null=True,blank=True)
     data_fim = models.DateField(null=True, blank=True)
     github = models.URLField()
-    imagem = models.ImageField(upload_to='projetos/', null=True, blank=True)
+    logo = models.ImageField(upload_to='projetos/', null=True, blank=True)
 
     uc = models.ForeignKey('unidadeCurricular.UnidadeCurricular', on_delete=models.CASCADE)
 
