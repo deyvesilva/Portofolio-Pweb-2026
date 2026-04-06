@@ -3,18 +3,12 @@ from .models import Formacao
 
 @admin.register(Formacao)
 class FormacaoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'entidade', 'data')
-    search_fields = ('nome', 'entidade')
-    list_filter = ('entidade',)
-    ordering = ('-data',)
+    list_display = ('nome', 'entidade', 'descricao')
 
-    filter_horizontal = ('competencias',)
+    search_fields = ('nome', 'entidade')
 
     fieldsets = (
         ('Formação', {
             'fields': ('nome', 'entidade', 'descricao', 'data')
-        }),
-        ('Relacionamentos', {
-            'fields': ('perfil', 'competencias')
         }),
     )

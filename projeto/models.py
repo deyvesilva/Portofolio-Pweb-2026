@@ -3,7 +3,8 @@ from django.db import models
 class Projeto(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.CharField(max_length=255)
-    data = models.DateField()
+    data_inicio = models.DateField(blank=True)
+    data_fim = models.DateField(null=True, blank=True)
     github = models.URLField()
     imagem = models.ImageField(upload_to='projetos/', null=True, blank=True)
 
