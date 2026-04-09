@@ -19,8 +19,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Adicione /admin para ver o portofolio")
 
 urlpatterns = [
+    path('', home),  # 👈 isto resolve o erro
     path('admin/', admin.site.urls),
 ]
 
