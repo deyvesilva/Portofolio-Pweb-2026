@@ -11,8 +11,10 @@ from .models import (
 def mostrar_imagem(obj, campo):
     imagem = getattr(obj, campo)
     if imagem:
-        return format_html('<img src="{}" width="60" height="60" style="object-fit:cover;" />', imagem.url)
+        return format_html('<img src="{}" width="60" height="35" style="object-fit:cover;" />', imagem.url)
     return "Sem imagem"
+
+list_display = ('nome', 'mostrar_logo','titulo','rating')
 
 
 # =========================
@@ -25,7 +27,7 @@ class LicenciaturaAdmin(admin.ModelAdmin):
     list_filter = ("universidade",)
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50] + "..." if len(obj.descricao) > 50 else obj.descricao
+        return obj.descricao[:700] + "..." if len(obj.descricao) > 50 else obj.descricao
 
     ver_descricao.short_description = "Descrição"
 
@@ -50,7 +52,7 @@ class TecnologiaAdmin(admin.ModelAdmin):
     list_filter = ("nivel",)
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50]
+        return obj.descricao[:300]
 
     def mostrar_logo(self, obj):
         return mostrar_imagem(obj, "logo")
@@ -80,7 +82,7 @@ class UnidadeCurricularAdmin(admin.ModelAdmin):
         return mostrar_imagem(obj, "imagem")
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50]
+        return obj.descricao[0:]
 
 
 # =========================
@@ -89,11 +91,11 @@ class UnidadeCurricularAdmin(admin.ModelAdmin):
 @admin.register(Projeto)
 class ProjetoAdmin(admin.ModelAdmin):
     list_display = (
-        "nome", "uc", "data_inicio", "data_fim",
+        "nome", "uc", "data_de_inicio", "data_de_fim",
         "mostrar_logo", "ver_descricao"
     )
     search_fields = ("nome",)
-    list_filter = ("uc", "data_inicio")
+    list_filter = ("uc", "data_de_inicio")
 
     filter_horizontal = ("tecnologias", "competencias")
 
@@ -101,7 +103,7 @@ class ProjetoAdmin(admin.ModelAdmin):
         return mostrar_imagem(obj, "logo")
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50]
+        return obj.descricao[:264]
 
 
 # =========================
@@ -109,14 +111,14 @@ class ProjetoAdmin(admin.ModelAdmin):
 # =========================
 @admin.register(Experiencia)
 class ExperienciaAdmin(admin.ModelAdmin):
-    list_display = ("empresa", "cargo", "data_inicio", "data_fim", "ver_descricao")
+    list_display = ("empresa", "cargo", "data_de_inicio", "data_de_fim", "ver_descricao")
     search_fields = ("empresa", "cargo")
-    list_filter = ("data_inicio",)
+    list_filter = ("data_de_inicio",)
 
     filter_horizontal = ("tecnologias", "competencias")
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50]
+        return obj.descricao[:400]
 
 
 # =========================
@@ -124,14 +126,14 @@ class ExperienciaAdmin(admin.ModelAdmin):
 # =========================
 @admin.register(Formacao)
 class FormacaoAdmin(admin.ModelAdmin):
-    list_display = ("nome", "entidade", "data", "ver_descricao")
+    list_display = ("nome", "entidade", "data_de_inicio","data_de_fim", "ver_descricao")
     search_fields = ("nome", "entidade")
-    list_filter = ("data",)
+    list_filter = ("data_de_inicio","data_de_fim")
 
     filter_horizontal = ("competencias",)
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50]
+        return obj.descricao[:500]
 
 
 # =========================
@@ -162,3 +164,5 @@ class MakingOfAdmin(admin.ModelAdmin):
         return mostrar_imagem(obj, "registos")
 
     mostrar_imagem.short_description = "Registos"
+    
+    

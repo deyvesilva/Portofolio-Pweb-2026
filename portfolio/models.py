@@ -5,7 +5,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 class Licenciatura(models.Model):
     nome = models.CharField(max_length=100)
     universidade = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=255)
+    descricao = models.TextField(max_length=700)
 
     def __str__(self):
         return self.nome
@@ -14,7 +14,7 @@ class Licenciatura(models.Model):
 class Perfil(models.Model):
     nome = models.CharField(max_length=100)
     idade = models.IntegerField()
-    bio = models.CharField(max_length=255, null=True, blank=True)
+    bio = models.TextField(max_length=600, null=True, blank=True)
 
     def __str__(self):
         return self.nome 
@@ -22,7 +22,7 @@ class Perfil(models.Model):
 #Tecnologia
 class Tecnologia(models.Model):
     nome = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=255)
+    descricao = models.TextField(max_length=255)
     website = models.URLField(blank=True, null=True)
     logo = models.ImageField(upload_to='tecnologias/', blank=True, null=True)
 
@@ -39,33 +39,35 @@ class Tecnologia(models.Model):
 
     def __str__(self):
         return self.nome
+    
     #Competencia
 class Competencia(models.Model):
     nome = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
+    
     #Unidade Curricular
 class UnidadeCurricular(models.Model):
     nome = models.CharField(max_length=100)
     ano = models.IntegerField()
     semestre = models.IntegerField()
-    descricao = models.CharField(max_length=255)
+    descricao = models.TextField()
     imagem = models.ImageField(upload_to='ucs/', null=True, blank=True)
 
     licenciatura = models.ForeignKey('licenciatura', on_delete=models.CASCADE)
     
-    docente_nome = models.CharField(max_length=100, null = True, blank = True)
-    docente_pagina = models.URLField(null = True, blank = True)
+    Nome_do_Docente = models.CharField(max_length=100, null = True, blank = True)
+    Pagina_do_Docente = models.URLField(null = True, blank = True)
 
     def __str__(self):
         return self.nome
     #Projecto
 class Projeto(models.Model):
     nome = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=255)
-    data_inicio = models.DateField(null=True,blank=True)
-    data_fim = models.DateField(null=True, blank=True)
+    descricao = models.TextField()
+    data_de_inicio = models.DateField(null=True,blank=True)
+    data_de_fim = models.DateField(null=True, blank=True)
     github = models.URLField()
     logo = models.ImageField(upload_to='projetos/', null=True, blank=True)
 
@@ -80,9 +82,9 @@ class Projeto(models.Model):
 class Experiencia(models.Model):
     empresa = models.CharField(max_length=100)
     cargo = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=255)
-    data_inicio = models.DateField()
-    data_fim = models.DateField(null=True, blank=True)
+    descricao = models.TextField(max_length=400)
+    data_de_inicio = models.DateField()
+    data_de_fim = models.DateField(null=True, blank=True)
 
     perfil = models.ForeignKey('perfil', on_delete=models.CASCADE)
 
@@ -95,8 +97,9 @@ class Experiencia(models.Model):
 class Formacao(models.Model):
     nome = models.CharField(max_length=100)
     entidade = models.CharField(max_length=100)
-    data = models.DateField()
-    descricao = models.CharField(max_length=255)
+    data_de_inicio = models.DateField()
+    data_de_fim = models.DateField(null=True, blank=True)
+    descricao = models.TextField(max_length=500)
 
     perfil = models.ForeignKey('perfil', on_delete=models.CASCADE)
     competencias = models.ManyToManyField('competencia', blank=True)
@@ -106,9 +109,10 @@ class Formacao(models.Model):
     #TFC
 class TFC(models.Model):
     titulo = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=255)
+    descricao = models.TextField(max_length=255)
     link = models.URLField(blank=True)
     ano = models.PositiveIntegerField()
+    imagem = models.URLField(blank=True, null=True)
 
     rating = models.IntegerField(
     validators=[MinValueValidator(1), MaxValueValidator(5)],
