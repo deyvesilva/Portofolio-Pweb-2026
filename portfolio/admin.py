@@ -141,14 +141,22 @@ class FormacaoAdmin(admin.ModelAdmin):
 # =========================
 @admin.register(TFC)
 class TFCAdmin(admin.ModelAdmin):
-    list_display = ("titulo", "ano", "rating", "ver_descricao")
+    list_display = ("titulo", "ano", "rating", "ver_descricao","mostrar_logo")
     search_fields = ("titulo",)
     list_filter = ("ano", "rating")
 
     filter_horizontal = ("tecnologias",)
+    
+    def mostrar_logo(self, obj):
+        if obj.imagem:
+            return format_html('<img src="{}" width="50" height="50" />', obj.imagem)
+        return "Sem imagem"
+    
+    mostrar_logo.short_description = "Imagem"
+    
 
     def ver_descricao(self, obj):
-        return obj.descricao[:50]
+        return obj.descricao[:200]
 
 
 # =========================
@@ -156,9 +164,9 @@ class TFCAdmin(admin.ModelAdmin):
 # =========================
 @admin.register(MakingOf)
 class MakingOfAdmin(admin.ModelAdmin):
-    list_display = ("id", "projeto", "mostrar_imagem", "decisoes")
+    list_display = ("id", "mostrar_imagem", "decisoes","erros","justificacoes","uso_ia")
     search_fields = ("decisoes",)
-    list_filter = ("projeto",)
+   # list_filter = ("registos")
 
     def mostrar_imagem(self, obj):
         return mostrar_imagem(obj, "registos")
