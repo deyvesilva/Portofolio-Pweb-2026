@@ -1,161 +1,277 @@
-# Making Of – Projeto Portfolio Django
+# 📘 Making Of – Projeto Portfolio Django
 
-## 1. Introdução
+## 📌 1. Introdução
 
-Este documento descreve o processo de desenvolvimento do projeto Portfolio desenvolvido em Django. Inclui decisões de modelação, problemas encontrados, soluções aplicadas e utilização de ferramentas de apoio.
+Este projeto consistiu no desenvolvimento de uma aplicação web em Django para gestão de um portfólio académico e profissional. O sistema permite armazenar e visualizar informação relativa a projetos, tecnologias, competências, formação, experiência profissional e trabalhos finais de curso (TFC).
 
----
-
-## 2. Decisões de Modelação
-
-### Tecnologia
-
-1. Foi utilizado um campo ImageField para armazenar o logo, permitindo associar visualmente cada tecnologia e melhorar a apresentação no admin e no frontend.
-2. O campo nivel foi definido com choices (1 a 5) para normalizar os dados e garantir consistência na avaliação das tecnologias.
-
-### Projeto
-
-1. Foi utilizada uma relação ManyToMany com Tecnologia para permitir que um projeto utilize várias tecnologias, refletindo a realidade de desenvolvimento de software.
-2. A utilização de ForeignKey para UnidadeCurricular permite associar cada projeto a uma unidade curricular específica, mantendo integridade referencial.
-
-### TFC
-
-1. O campo rating foi limitado entre 1 e 5 usando validadores, garantindo que os valores inseridos são válidos e consistentes.
-2. A relação ManyToMany com Tecnologia permite identificar facilmente as tecnologias utilizadas em cada trabalho final de curso.
-
-### Experiência
-
-1. Foi utilizada uma ForeignKey para Perfil para associar cada experiência a um utilizador específico, garantindo organização dos dados.
-2. A relação ManyToMany com Competencia e Tecnologia permite representar múltiplas competências e ferramentas utilizadas numa experiência profissional.
-
-### Formação
-
-1. O uso de DateField permite armazenar datas de forma estruturada, facilitando ordenação e filtragem.
-2. A relação ManyToMany com Competencia permite associar várias competências adquiridas em cada formação.
-
-### Unidade Curricular
-
-1. Foi utilizada uma ForeignKey para Licenciatura para manter a ligação entre unidades curriculares e o curso correspondente.
-2. O campo imagem foi incluído para enriquecer visualmente a apresentação das unidades curriculares.
-
-### Licenciatura
-
-1. A entidade foi separada para evitar redundância de dados ao associar várias unidades curriculares ao mesmo curso.
-2. Os campos nome e universidade permitem identificar claramente o contexto académico.
-
-### Perfil
-
-1. A entidade Perfil foi criada para centralizar informação do utilizador, permitindo reutilização noutras entidades como Experiência e Formação.
-2. O campo bio é opcional (null=True, blank=True), permitindo flexibilidade no preenchimento dos dados.
-
-### Competência
-
-1. Foi criada como entidade independente para evitar repetição de dados e permitir reutilização em múltiplos contextos.
-2. A sua utilização em relações ManyToMany permite associar várias competências a diferentes entidades.
+Foram também integradas fontes externas de dados, nomeadamente ficheiros JSON e APIs da Universidade Lusófona.
 
 ---
 
-## 3. Problemas Encontrados e Soluções
+## 🧱 2. Modelação do Sistema
 
-### Problema 1: Erro "no such column"
+### 🔹 Decisões gerais
 
-* Causa: Alterações nos modelos sem aplicar migrações.
-* Solução: Execução dos comandos:
-
-  * python manage.py makemigrations
-  * python manage.py migrate
-
-### Problema 2: Imagens não apareciam
-
-* Causa: Configuração incompleta de MEDIA_URL e MEDIA_ROOT.
-* Solução:
-
-  * Configuração no settings.py
-  * Adição de static() no urls.py
-  * Criação da pasta media/
-
-### Problema 3: Estrutura incorreta da pasta media
-
-* Causa: Mistura de código Django com ficheiros de media.
-* Solução:
-
-  * Separação clara entre apps e media
-  * Uso de media apenas para imagens e ficheiros
-
-### Problema 4: Conflitos no Git
-
-* Causa: Alterações estruturais (movimento de pastas).
-* Solução:
-
-  * Uso de git pull --rebase
-  * Correção manual da estrutura
-  * Organização adequada do repositório
+* Utilização do **Django ORM** para garantir consistência e facilidade na manipulação de dados.
+* Separação do sistema em **várias entidades (models)** para garantir normalização.
+* Uso de relações **ForeignKey** e **ManyToMany** para refletir relações reais.
 
 ---
 
-## 4. Importação de Dados (JSON)
+## 🧠 3. Justificação das Decisões de Modelação
 
-Foi implementado um sistema de importação automática de dados de TFC através de um ficheiro JSON.
+### 👤 Perfil
 
-### Passos:
-
-1. Criação da pasta `portfolio/data`
-2. Adição do ficheiro `tfc.json`
-3. Criação do script `loader.py`
-
-### Funcionamento:
-
-* O script lê o ficheiro JSON
-* Percorre os dados
-* Cria automaticamente objetos TFC na base de dados usando o ORM do Django
-
-### Execução:
-
-* python manage.py shell
-* from portfolio import loader
+* Separado das restantes entidades para permitir reutilização (ex: experiência, formação).
+* Permite centralizar informação pessoal.
 
 ---
 
-## 5. Organização de Ficheiros de Media
+### 🎓 Licenciatura
 
-Foi criada a pasta `media/` para armazenar:
-
-* logos de tecnologias
-* imagens de projetos
-* imagens de unidades curriculares
-
-Estrutura:
-
-* media/tecnologias/
-* media/projetos/
-* media/ucs/
+* Criada como entidade própria para permitir ligação com várias unidades curriculares.
+* Facilita futura expansão (ex: vários cursos).
 
 ---
 
-## 6. Uso de Ferramentas de IA
+### 📚 Unidade Curricular
 
-Foram utilizadas ferramentas de Inteligência Artificial como apoio ao desenvolvimento, nomeadamente para:
-
-* resolução de erros Django
-* configuração do admin
-* criação do script de importação JSON
-* organização da estrutura do projeto
-
-A utilização de IA permitiu acelerar o processo de desenvolvimento e melhorar a qualidade das soluções implementadas, embora todas as decisões tenham sido compreendidas e adaptadas ao contexto do projeto.
+* Relacionada com Licenciatura (ForeignKey).
+* Permite estruturar o curso de forma organizada.
+* Inclui imagem para representação visual.
 
 ---
 
-## 7. Melhorias Futuras
+### 💻 Tecnologia
 
-* Desenvolvimento de interface frontend para visualização dos dados
-* Implementação de sistema de pesquisa e filtros
-* Associação automática de tecnologias a partir do texto dos TFC
-* Melhorias na interface do admin
+* Criada como entidade independente para reutilização em múltiplos contextos.
+* Relação ManyToMany com Projetos, TFC e Experiência.
+* Inclui:
+
+  * nível (1–5)
+  * logo (ImageField)
 
 ---
 
-## 8. Conclusão
+### 🧠 Competência
 
-A modelação foi pensada para garantir organização, reutilização e escalabilidade dos dados. O uso de Django ORM permitiu uma gestão eficiente da base de dados e a integração de dados externos (JSON) tornou o sistema mais dinâmico.
+* Separada de Tecnologia para distinguir conhecimentos técnicos de competências gerais.
+* Permite associação a múltiplas entidades.
 
-O projeto cumpre os objetivos propostos, apresentando uma estrutura consistente, funcional e extensível.
+---
+
+### 📁 Projeto
+
+* Relacionado com:
+
+  * Unidade Curricular
+  * Tecnologias
+  * Competências
+* Permite representar projetos académicos com contexto completo.
+
+---
+
+### 💼 Experiência
+
+* Relacionada com Perfil.
+* Permite associar tecnologias e competências usadas no contexto profissional.
+
+---
+
+### 🎓 Formação
+
+* Semelhante à experiência, mas focada em formação complementar.
+* Permite associar competências adquiridas.
+
+---
+
+### 🧪 TFC (Trabalho Final de Curso)
+
+* Criado como entidade independente.
+* Inclui:
+
+  * título
+  * descrição
+  * rating
+  * imagem (vinda do JSON)
+* Relacionado com tecnologias.
+
+---
+
+### 🛠️ Making Of
+
+* Criado como entidade para documentar o processo de desenvolvimento.
+* Inclui:
+
+  * decisões
+  * erros
+  * justificações
+  * uso de IA
+
+---
+
+## 🖼️ 4. Gestão de Imagens
+
+* Utilização de `ImageField` para armazenar imagens.
+* Configuração de:
+
+  * `MEDIA_ROOT`
+  * `MEDIA_URL`
+* Organização dos ficheiros em:
+
+  ```
+  media/
+    ├── tecnologias/
+    ├── projetos/
+    ├── ucs/
+    └── makingof/
+  ```
+
+### Problema encontrado:
+
+* Imagens não apareciam no admin.
+
+### Solução:
+
+* Configuração correta do `urls.py`:
+
+```python
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+---
+
+## 📊 5. Importação de Dados (JSON)
+
+### ✔ TFCs
+
+Foi desenvolvido um script (`loader.py`) para importar dados de um ficheiro JSON.
+
+### Processo:
+
+* Leitura do ficheiro JSON
+* Criação de objetos TFC via ORM
+
+### Problemas encontrados:
+
+* Campos com nomes diferentes (ex: `courseName` vs `name`)
+* Dados inconsistentes
+
+### Soluções:
+
+* Uso de `.get()` para evitar erros
+* Ajuste manual dos campos
+
+---
+
+## 🌐 6. Integração com API Lusófona
+
+Foram utilizados endpoints da API para obter:
+
+* Informação do curso
+* Unidades curriculares
+
+### Problemas encontrados:
+
+#### ❌ Erro:
+
+```
+KeyError: 'name'
+```
+
+✔ Solução:
+
+* Uso correto de:
+
+```python
+data['courseDetail']['courseName']
+```
+
+---
+
+#### ❌ Erro:
+
+```
+ValueError: invalid literal for int() with base 10: '1º Semestre'
+```
+
+✔ Solução:
+
+* Conversão de string para inteiro
+
+---
+
+#### ❌ Erro:
+
+```
+ValueError: 'Anual'
+```
+
+✔ Solução:
+
+```python
+if "1" in semestre_str:
+    semestre = 1
+elif "2" in semestre_str:
+    semestre = 2
+else:
+    semestre = 0
+```
+
+---
+
+## ⚙️ 7. Administração (Admin Django)
+
+Foi configurado o admin para:
+
+* Visualização de imagens (logos e thumbnails)
+* Filtros
+* Pesquisa
+* Relações ManyToMany com interface melhorada
+
+---
+
+## 🧪 8. Problemas e Erros Encontrados
+
+* Erros de migração (`no such column`)
+* Apps não registadas no `INSTALLED_APPS`
+* Problemas com imagens (media)
+* Conflitos no Git (merge/rebase)
+* Estrutura errada (apps dentro de media)
+
+---
+
+## 🤖 9. Uso de Inteligência Artificial
+
+A IA foi utilizada como apoio no desenvolvimento:
+
+* Resolução de erros técnicos
+* Explicação de conceitos Django
+* Criação e melhoria de código
+* Estruturação do projeto
+* Apoio na escrita do Making Of
+
+---
+
+## 📦 10. Versionamento (Git)
+
+* Uso de commits frequentes
+* Mensagens descritivas
+* Resolução de conflitos com `rebase`
+
+---
+
+## ✅ 11. Conclusão
+
+O projeto permitiu consolidar conhecimentos em:
+
+* Django
+* Modelação de dados
+* APIs
+* JSON
+* Upload de ficheiros
+* Git
+
+Foram enfrentados vários desafios técnicos, resolvidos com sucesso, resultando numa aplicação funcional, estruturada e extensível.
+
+---

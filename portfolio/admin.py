@@ -74,7 +74,7 @@ class CompetenciaAdmin(admin.ModelAdmin):
 # =========================
 @admin.register(UnidadeCurricular)
 class UnidadeCurricularAdmin(admin.ModelAdmin):
-    list_display = ("nome", "ano", "semestre", "licenciatura", "mostrar_imagem", "ver_descricao")
+    list_display = ("nome", "ano", "semestre", "licenciatura", "mostrar_imagem", "descricao")
     search_fields = ("nome",)
     list_filter = ("ano", "semestre", "licenciatura")
 
