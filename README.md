@@ -10,8 +10,6 @@ Foram também integradas fontes externas de dados, nomeadamente ficheiros JSON e
 
 ## 🔐 Acesso à Aplicação
 
-Para efeitos de demonstração, está disponível um utilizador de teste:
-
 - **Username:** `deyve`  
 - **Password:** `admin1234`  
 
