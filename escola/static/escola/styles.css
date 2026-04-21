@@ -84,6 +84,15 @@ article > header > p {
     font-size: 14px;
     color: #374151;
 }
+article > section > ul > li a {
+    color: inherit; /* Mantém a cor branca do texto */
+    text-decoration: none; /* Retira o sublinhado */
+    display: block;
+}
+
+article > section > ul > li:hover {
+    background: #1d4ed8; /* Escurece um pouco ao passar o rato */
+}
 
 /* SEÇÃO DO CARD */
 article > section {

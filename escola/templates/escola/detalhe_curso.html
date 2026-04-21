@@ -1,0 +1,20 @@
+{% extends "escola/base.html" %}
+
+{% block content %}
+    <h2>{{ curso.nome }}</h2>
+    {% if curso.imagem %}
+        <img src="{{ curso.imagem.url }}" alt="{{ curso.nome }}" style="max-width: 300px;">
+    {% endif %}
+    <p><strong>Professor:</strong> {{ curso.professor.nome }}</p>
+    
+    <h4>Alunos inscritos:</h4>
+    <ul>
+        {% for aluno in curso.alunos.all %}
+            <li>{{ aluno.nome }}</li>
+        {% empty %}
+            <li>Ainda não há alunos neste curso.</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'cursos' %}">← Voltar para a lista</a>
+{% endblock %}

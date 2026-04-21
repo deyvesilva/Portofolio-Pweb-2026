@@ -25,10 +25,11 @@ def home(request):
     return HttpResponse("Bem vindo ao meu portofolio ou a aplicação 'ESCOLA' da ficha 7, Para ver o Portofolio, adicione '/admin' ao link, para ver a escola, faça '/escola' ao link")
 
 urlpatterns = [
-    path('', home),  # 👈 isto resolve o erro
+    path('', include('portfolio.urls')),
     path('admin/', admin.site.urls),
     path("escola/", include("escola.urls")),       #     <- rota para aplicação web escola
     path("", include("escola.urls")),  #  rota para app escola sem precisar de escrever "escola"
+    path('portfolio/', include('portfolio.urls')), # Incluir a app de portfólio
 ]
 
 if settings.DEBUG:

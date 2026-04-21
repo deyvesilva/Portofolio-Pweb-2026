@@ -1,0 +1,57 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+<div style="text-align: center; padding: 40px 0;">
+    <h1 style="font-size: 2.5em; color: #2d3748;">Bem-vindo ao meu Portfólio</h1>
+    <p style="color: #718096;">Escolha uma secção para explorar</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px;">
+    
+    <a href="{% url 'curriculo' %}" style="text-decoration: none; color: inherit;">
+        <div class="card-menu">
+            <h2 style="color: #3182ce;">👤 Perfil & Currículo</h2>
+            <p>Conheça a minha trajetória, experiências e competências.</p>
+        </div>
+    </a>
+
+    <a href="{% url 'licenciatura' %}" style="text-decoration: none; color: inherit;">
+        <div class="card-menu">
+            <h2 style="color: #3182ce;">🎓 Licenciatura</h2>
+            <p>Detalhes da minha formação académica e unidades curriculares.</p>
+        </div>
+    </a>
+
+    <a href="{% url 'projetos' %}" style="text-decoration: none; color: inherit;">
+        <div class="card-menu">
+            <h2 style="color: #3182ce;">💻 Projetos</h2>
+            <p>Explore os trabalhos e aplicações que desenvolvi.</p>
+        </div>
+    </a>
+
+    <a href="{% url 'tecnologias' %}" style="text-decoration: none; color: inherit;">
+        <div class="card-menu">
+            <h2 style="color: #3182ce;">🛠️ Tecnologias</h2>
+            <p>As ferramentas e linguagens que domino.</p>
+        </div>
+    </a>
+
+</div>
+
+<style>
+    .card-menu {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        border: 1px solid #e2e8f0;
+    }
+    .card-menu:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+        border-color: #3182ce;
+    }
+</style>
+{% endblock %}
