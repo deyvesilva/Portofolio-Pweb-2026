@@ -1,7 +1,7 @@
 {% extends "portfolio/base.html" %}
 
 {% block content %}
-<div class="card" style="text-align: center; border-bottom: 4px solid #3182ce;">
+<div class="card" style="text-align: center; border-bottom: 4px solid #ce3131;">
     <h1>{{ perfil.nome }}</h1>
     <p style="font-size: 1.2em; color: #4a5568;">{{ perfil.idade }} anos</p>
     <p style="max-width: 700px; margin: 0 auto; line-height: 1.6;">{{ perfil.bio }}</p>
@@ -10,17 +10,17 @@
 <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px;">
     
     <div>
-        <h2 style="border-left: 5px solid #3182ce; padding-left: 15px;">Experiência Profissional</h2>
+        <h2 style="border-left: 5px solid #ce3131; padding-left: 15px;">Experiência Profissional</h2>
         {% for exp in experiencias %}
         <div class="card">
             <h3 style="margin: 0;">{{ exp.cargo }}</h3>
-            <p style="color: #3182ce; font-weight: bold; margin: 5px 0;">{{ exp.empresa }}</p>
+            <p style="color: #ce3131; font-weight: bold; margin: 5px 0;">{{ exp.empresa }}</p>
             <p style="font-size: 0.9em; color: #718096;">{{ exp.data_de_inicio }} - {% if exp.data_de_fim %}{{ exp.data_de_fim }}{% else %}Presente{% endif %}</p>
             <p>{{ exp.descricao }}</p>
         </div>
         {% endfor %}
 
-        <h2 style="border-left: 5px solid #3182ce; padding-left: 15px; margin-top: 40px;">Formações</h2>
+        <h2 style="border-left: 5px solid #ce3131; padding-left: 15px; margin-top: 40px;">Formações</h2>
         {% for form in formacoes %}
         <div class="card">
             <h3 style="margin: 0;">{{ form.nome }}</h3>
@@ -31,11 +31,11 @@
     </div>
 
     <div>
-        <h2 style="border-left: 5px solid #3182ce; padding-left: 15px;">Competências</h2>
+        <h2 style="border-left: 5px solid #ce3131; padding-left: 15px;">Competências</h2>
         <div class="card">
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                 {% for comp in competencias %}
-                <span style="background: #ebf8ff; color: #2b6cb0; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em; border: 1px solid #bee3f8;">
+                <span style="background: #ebf8ff; color: #ce3131; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em; border: 1px solid #bee3f8;">
                     {{ comp.nome }}
                 </span>
                 {% endfor %}

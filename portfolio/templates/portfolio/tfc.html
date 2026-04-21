@@ -1,0 +1,59 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+<div style="max-width: 900px; margin: 0 auto;">
+    <h1 style="text-align: center; color: #2d3748; margin-bottom: 40px;">🎓 Trabalho de Fim de Curso</h1>
+
+    {% for tfc in tfcs %}
+    <div class="card" style="border-left: 8px solid #a80f96; padding: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 style="margin: 0; color: #2d3748;">{{ tfc.titulo }}</h2>
+            <span style="background: #feebc8; color: #9c4221; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em;">
+                Ano: {{ tfc.ano }}
+            </span>
+        </div>
+
+        <p style="text-align: justify; line-height: 1.8; color: #4a5568; font-size: 1.1em;">
+            {{ tfc.descricao }}
+        </p>
+
+        <div style="margin: 25px 0; padding: 20px; background: #fffaf0; border-radius: 12px; border: 1px solid #fbd38d;">
+            <p style="margin: 0; font-weight: bold; color: #a80f96;">Avaliação do Projeto:</p>
+            <div style="font-size: 1.5em; margin-top: 5px;">
+                {% if tfc.rating %}
+                    <span style="color: #a80f96;">
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= tfc.rating %}★{% else %}☆{% endif %}
+                        {% endfor %}
+                    </span>
+                    <span style="font-size: 0.7em; color: #718096; margin-left: 10px;">({{ tfc.rating }}/5)</span>
+                {% else %}
+                    <span style="color: #a0aec0; font-size: 0.7em;">Ainda sem classificação</span>
+                {% endif %}
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <h4 style="margin-bottom: 10px;">Tecnologias Utilizadas:</h4>
+            {% for tech in tfc.tecnologias.all %}
+                <span style="background: #2d3748; color: white; padding: 5px 12px; border-radius: 4px; font-size: 0.85em; margin-right: 5px;">
+                    {{ tech.nome }}
+                </span>
+            {% endfor %}
+        </div>
+
+        {% if tfc.link %}
+        <div style="margin-top: 30px; text-align: right;">
+            <a href="{{ tfc.link }}" target="_blank" style="background: #3182ce; color: white; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+                Aceder ao Projeto Completo →
+            </a>
+        </div>
+        {% endif %}
+    </div>
+    {% empty %}
+    <div class="card" style="text-align: center; padding: 50px;">
+        <p style="color: #718096;">Ainda não adicionaste os detalhes do teu TFC no Admin.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -19,12 +19,12 @@
             <div style="margin-top: 15px;">
                 <span style="font-weight: bold; font-size: 0.8em; color: #2b6cb0;">Nível: {{ tech.nivel }}/5</span>
                 <div style="background: #edf2f7; border-radius: 4px; height: 8px; margin-top: 5px;">
-                    <div style="background: #4299e1; width: {% widthratio tech.nivel 5 100 %}%; height: 100%; border-radius: 4px;"></div>
+                    <div style="background: #ba5a0a; width: {% widthratio tech.nivel 5 100 %}%; height: 100%; border-radius: 4px;"></div>
                 </div>
             </div>
 
             {% if tech.website %}
-                <a href="{{ tech.website }}" target="_blank" style="display: inline-block; margin-top: 15px; font-size: 0.8em; color: #3182ce; text-decoration: none;">Ver site oficial →</a>
+                <a href="{{ tech.website }}" target="_blank" style="display: inline-block; margin-top: 15px; font-size: 0.8em; color: #ba5a0a; text-decoration: none;">Ver site oficial →</a>
             {% endif %}
         </article>
         {% empty %}

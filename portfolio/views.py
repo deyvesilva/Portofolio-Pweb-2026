@@ -28,3 +28,8 @@ def curriculo_view(request):
     form = Formacao.objects.all()
     comp = Competencia.objects.all()
     return render(request, 'portfolio/curriculo.html', {'perfil': perfil, 'experiencias': exp, 'formacoes': form, 'competencias': comp})
+
+def tfc_view(request):
+    # Puxamos todos os TFCs 
+    tfcs = TFC.objects.all()
+    return render(request, 'portfolio/tfc.html', {'tfcs': tfcs})

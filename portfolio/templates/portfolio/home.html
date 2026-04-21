@@ -1,57 +1,146 @@
 {% extends "portfolio/base.html" %}
+{% load static %}
 
 {% block content %}
-<div style="text-align: center; padding: 40px 0;">
-    <h1 style="font-size: 2.5em; color: #2d3748;">Bem-vindo ao meu Portfólio</h1>
-    <p style="color: #718096;">Escolha uma secção para explorar</p>
+<div class="hero-container">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1 class="hero-title">Meu Portfólio</h1>
+            <p class="hero-subtitle">Programação Web | 2026</p>
+        </div>
+    </div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px;">
+<div class="menu-grid">
     
-    <a href="{% url 'curriculo' %}" style="text-decoration: none; color: inherit;">
-        <div class="card-menu">
-            <h2 style="color: #3182ce;">👤 Perfil & Currículo</h2>
-            <p>Conheça a minha trajetória, experiências e competências.</p>
+    <a href="{% url 'curriculo' %}" class="card-link">
+        <div class="card-menu card-profile">
+            <h2>👤 Perfil</h2>
+            <p class="card-text">Minha trajetória académica, experiências profissionais, formações e competências essenciais.</p>
         </div>
     </a>
 
-    <a href="{% url 'licenciatura' %}" style="text-decoration: none; color: inherit;">
-        <div class="card-menu">
-            <h2 style="color: #3182ce;">🎓 Licenciatura</h2>
-            <p>Detalhes da minha formação académica e unidades curriculares.</p>
+    <a href="{% url 'licenciatura' %}" class="card-link">
+        <div class="card-menu card-licenciatura">
+            <h2>🎓 Licenciatura</h2>
+            <p class="card-text">Detalhes da minha formação e o plano de estudos das Unidades Curriculares (UCs).</p>
         </div>
     </a>
 
-    <a href="{% url 'projetos' %}" style="text-decoration: none; color: inherit;">
-        <div class="card-menu">
-            <h2 style="color: #3182ce;">💻 Projetos</h2>
-            <p>Explore os trabalhos e aplicações que desenvolvi.</p>
+    <a href="{% url 'projetos' %}" class="card-link">
+        <div class="card-menu card-projetos">
+            <h2>💻 Projetos</h2>
+            <p class="card-text">Veja os meus projetos escolares.</p>
         </div>
     </a>
 
-    <a href="{% url 'tecnologias' %}" style="text-decoration: none; color: inherit;">
-        <div class="card-menu">
-            <h2 style="color: #3182ce;">🛠️ Tecnologias</h2>
-            <p>As ferramentas e linguagens que domino.</p>
+    <a href="{% url 'tfc' %}" class="card-link">
+        <div class="card-menu card-tfc">
+            <h2>⭐ TFC</h2>
+            <p class="card-text">Trabalho de Fim de Curso de colegas de 2025</p>
         </div>
     </a>
 
+    <a href="{% url 'tecnologias' %}" class="card-link">
+        <div class="card-menu card-tech">
+            <h2>🛠️ Tecnologias</h2>
+            <p class="card-text">As ferramentas, linguagens e frameworks que utilizei e utilizo no dia a dia.</p>
+        </div>
+    </a>
+    
 </div>
 
 <style>
+    /* Hero Section */
+    .hero-container {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        overflow: hidden;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), 
+                          url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .hero-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-title { font-size: 3em; margin: 0; font-weight: 800; text-transform: uppercase; }
+    .hero-subtitle { font-size: 1.2em; opacity: 0.9; }
+
+    /* GRELHA DE CARTÕES - O segredo para não colarem está aqui */
+    .menu-grid {
+        display: grid;
+        /* Cria colunas de no mínimo 280px, distribuindo o espaço restante */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 25px; /* Espaço entre os cartões */
+        padding: 20px 0;
+        margin-bottom: 50px;
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block; /* Garante que o link envolve todo o cartão */
+    }
+
     .card-menu {
         background: white;
         padding: 30px;
         border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
         border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        height: 100%;
+        box-sizing: border-box; /* Garante que o padding não "empurra" o tamanho */
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
+
     .card-menu:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.1);
         border-color: #3182ce;
+    }
+
+    .card-menu h2 {
+        margin-top: 0;
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Cores dos títulos */
+    .card-profile h2 { color: #2b6cb0; }
+    .card-licenciatura h2 { color: #2d3748; }
+    .card-projetos h2 { color: #38a169; }
+    .card-tfc h2 { color: #dd6b20; }
+    .card-tech h2 { color: #805ad5; }
+
+    /* Texto Justificado */
+    .card-text {
+        font-size: 0.95em;
+        color: #4a5568;
+        line-height: 1.6;
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .hero-title { font-size: 2em; }
+        .menu-grid { grid-template-columns: 1fr; } /* Em telemóveis, fica um por baixo do outro */
     }
 </style>
 {% endblock %}
