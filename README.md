@@ -39,7 +39,6 @@ A aplicação utiliza um modelo de dados robusto:
 
 ## 🔐 Acesso à Administração
 
-* **URL:** `http://localhost:8000/admin`
 * **Username:** `deyve`
 * **Password:** `admin1234`
 
