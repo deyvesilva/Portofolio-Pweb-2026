@@ -16,17 +16,19 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Adicione /admin para ver o portofolio")
+    return HttpResponse("Bem vindo ao meu portofolio ou a aplicação 'ESCOLA' da ficha 7, Para ver o Portofolio, adicione '/admin' ao link, para ver a escola, faça '/escola' ao link")
 
 urlpatterns = [
     path('', home),  # 👈 isto resolve o erro
     path('admin/', admin.site.urls),
+    path("escola/", include("escola.urls")),       #     <- rota para aplicação web escola
+    path("", include("escola.urls")),  #  rota para app escola sem precisar de escrever "escola"
 ]
 
 if settings.DEBUG:
