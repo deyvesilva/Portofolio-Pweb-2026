@@ -42,3 +42,15 @@ A aplicação utiliza um modelo de dados robusto:
 * **Username:** `deyve`
 * **Password:** `admin1234`
 
+
+## 🛠️ Painel de Gestão (Dashboard)
+
+Além da administração nativa do Django, o projeto inclui um **Dashboard de Gestão Customizado**. Este painel permite realizar operações de CRUD (Criar, Ler, Atualizar e Eliminar) de forma centralizada em todos os modelos do portfólio, sem a necessidade de navegar por menus complexos.
+
+### Como Aceder:
+1. Certifique-se de que o servidor está a correr: `python manage.py runserver`
+2. Aceda ao URL direto: http://localhost:8000/dashboard/
+3. Através deste painel, pode gerir:
+   * **Perfil & Licenciatura:** Edição rápida de bios e descrições.
+   * **Conteúdo:** Adicionar ou remover Projetos, UCs, Competências e Experiências.
+   * **Visualização:** As alterações feitas aqui refletem-se instantaneamente nas páginas públicas de visualização.
