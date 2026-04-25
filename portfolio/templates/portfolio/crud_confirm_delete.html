@@ -1,0 +1,12 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+<div class="card" style="max-width: 450px; margin: 80px auto; text-align: center; padding: 30px; border: 2px solid #feb2b2;">
+    <h2 style="color: #e53e3e;">⚠ Tens a certeza?</h2>
+    <p>Vais eliminar permanentemente o registo: <br><strong>{{ object }}</strong></p>
+    <form method="post" style="margin-top: 20px;">
+        {% csrf_token %}
+        <button type="submit" style="background: #e53e3e; color: white; padding: 10px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Sim, Eliminar</button>
+        <a href="javascript:history.back()" style="margin-left: 15px; color: #4a5568;">Não, voltar atrás</a>
+    </form>
+</div>
+{% endblock %}
