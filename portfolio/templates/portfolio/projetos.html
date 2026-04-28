@@ -3,40 +3,36 @@
 {% block content %}
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
     <h1 style="margin: 0;">Meus Projetos</h1>
-    <a href="{% url 'projeto_novo' %}" style="background: #3182ce; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">➕ Novo Projeto</a>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
-    {% for projeto in projetos %}
-    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; position: relative;">
-        <div>
-            {% if projeto.logo %}
-                <img src="{{ projeto.logo.url }}" alt="{{ projeto.nome }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; margin-bottom: 15px;">
-            {% endif %}
-            
-            <h3 style="margin: 0 0 10px 0; color: #2d3748;">{{ projeto.nome }}</h3>
-            <p style="color: #4a5568; font-size: 0.95em; text-align: justify;">{{ projeto.descricao }}</p>
-            
-            <div style="margin: 15px 0;">
-                <strong>Techs:</strong>
-                {% for tech in projeto.tecnologias.all %}
-                    <small style="background: #edf2f7; padding: 2px 8px; border-radius: 4px; margin-right: 5px;">{{ tech.nome }}</small>
-                {% endfor %}
-            </div>
         </div>
         
-        <div style="margin-top: auto;">
-            <a href="{{ projeto.github }}" target="_blank" style="display: block; background: #34ce31; color: white; text-align: center; padding: 10px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-bottom: 10px;">
-                Ver no GitHub
-            </a>
-            <div style="display: flex; gap: 10px; justify-content: center; font-size: 0.85em; border-top: 1px solid #eee; padding-top: 10px;">
-                <a href="{% url 'projeto_editar' projeto.id %}" style="color: #3182ce; text-decoration: none;">✏️ Editar</a>
-                <a href="{% url 'projeto_eliminar' projeto.id %}" style="color: #e53e3e; text-decoration: none;">🗑️ Eliminar</a>
-            </div>
-        </div>
-    </div>
-    {% empty %}
-    <p>Ainda não há projetos para mostrar.</p>
-    {% endfor %}
-</div>
-{% endblock %}
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+            {% for projeto in projetos %}
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+                        <div>
+                                    {% if projeto.logo %}
+                                                    <img src="{{ projeto.logo.url }}" alt="{{ projeto.nome }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; margin-bottom: 15px;">
+                                                                {% endif %}
+                                                                            
+                                                                                        <h3 style="margin: 0 0 10px 0; color: #2d3748;">{{ projeto.nome }}</h3>
+                                                                                                    <p style="color: #4a5568; font-size: 0.95em; text-align: justify;">{{ projeto.descricao }}</p>
+                                                                                                                
+                                                                                                                            <div style="margin: 15px 0;">
+                                                                                                                                            <strong>Techs:</strong>
+                                                                                                                                                            {% for tech in projeto.tecnologias.all %}
+                                                                                                                                                                                <small style="background: #edf2f7; padding: 2px 8px; border-radius: 4px; margin-right: 5px;">{{ tech.nome }}</small>
+                                                                                                                                                                                                {% endfor %}
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                    <div style="margin-top: auto;">
+                                                                                                                                                                                                                                                <a href="{{ projeto.github }}" target="_blank" style="display: block; background: #34ce31; color: white; text-align: center; padding: 10px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-bottom: 10px;">
+                                                                                                                                                                                                                                                                Ver no GitHub
+                                                                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                               </div>
+                                                                                                                                                                                                                                                                                                   </div>
+                                                                                                                                                                                                                                                                                                       {% empty %}
+                                                                                                                                                                                                                                                                                                           <p>Ainda não há projetos para mostrar.</p>
+                                                                                                                                                                                                                                                                                                               {% endfor %}
+                                                                                                                                                                                                                                                                                                               </div>
+                                                                                                                                                                                                                                                                                                               {% endblock %}}

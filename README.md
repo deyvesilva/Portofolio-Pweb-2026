@@ -54,3 +54,13 @@ Além da administração nativa do Django, o projeto inclui um **Dashboard de Ge
    * **Perfil & Licenciatura:** Edição rápida de bios e descrições.
    * **Conteúdo:** Adicionar ou remover Projetos, UCs, Competências e Experiências.
    * **Visualização:** As alterações feitas aqui refletem-se instantaneamente nas páginas públicas de visualização.
+
+---
+
+## 🔒 Gestão de Conteúdo (Privado)
+
+Para garantir uma experiência de visualização limpa e profissional, todas as funcionalidades de gestão (**Criar, Editar e Eliminar**) foram removidas das páginas públicas do portfólio. 
+
+A gestão do site é agora feita centralizadamente através de um **Dashboard de Administração**:
+* **URL de Gestão:** `http://localhost:8000/dashboard/`
+* **Objetivo:** Centralizar o controlo de Perfil, Licenciatura, Projetos e Competências num único local seguro, mantendo o front-end do portfólio focado apenas na apresentação de conteúdos.

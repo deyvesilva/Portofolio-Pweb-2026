@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="card" style="text-align: center; border-bottom: 4px solid #ce3131; position: relative;">
-    <a href="{% url 'perfil_editar' perfil.id %}" style="position: absolute; top: 10px; right: 10px; text-decoration: none;">✏️</a>
+
     <h1>{{ perfil.nome }}</h1>
     <p style="font-size: 1.2em; color: #4a5568;">{{ perfil.idade }} anos</p>
     <p style="max-width: 700px; margin: 0 auto; line-height: 1.6; text-align: justify;">{{ perfil.bio }}</p>
@@ -12,7 +12,7 @@
     <div>
         <div style="display: flex; justify-content: space-between; align-items: center; border-left: 5px solid #ce3131; padding-left: 15px; margin-bottom: 15px;">
             <h2 style="margin: 0;">Experiência Profissional</h2>
-            <a href="{% url 'experiencia_nova' %}" style="font-size: 0.8em; background: #ce3131; color: white; padding: 5px 10px; border-radius: 4px; text-decoration: none;">+ Adicionar</a>
+        
         </div>
         
         {% for exp in experiencias %}
@@ -20,8 +20,7 @@
             <div style="display: flex; justify-content: space-between;">
                 <h3 style="margin: 0;">{{ exp.cargo }}</h3>
                 <div style="font-size: 0.8em;">
-                    <a href="{% url 'experiencia_editar' exp.id %}">✏️</a>
-                    <a href="{% url 'experiencia_eliminar' exp.id %}">🗑️</a>
+                
                 </div>
             </div>
             <p style="color: #ce3131; font-weight: bold; margin: 5px 0;">{{ exp.empresa }}</p>
