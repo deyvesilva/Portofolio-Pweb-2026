@@ -4,14 +4,13 @@
 <div style="max-width: 900px; margin: 0 auto;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
         <h1 style="margin: 0; color: #2d3748;">🎓 Trabalho de Fim de Curso</h1>
-        <a href="{% url 'tfc_novo' %}" style="background: #a80f96; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">➕ Registar TFC</a>
+        
     </div>
 
     {% for tfc in tfcs %}
     <div class="card" style="border-left: 8px solid #a80f96; padding: 30px; position: relative;">
         <div style="position: absolute; top: 15px; right: 15px; display: flex; gap: 10px;">
-            <a href="{% url 'tfc_editar' tfc.id %}" style="background: #edf2f7; padding: 5px 10px; border-radius: 4px; text-decoration: none;">✏️ Editar</a>
-            <a href="{% url 'tfc_eliminar' tfc.id %}" style="background: #fff5f5; color: #e53e3e; padding: 5px 10px; border-radius: 4px; text-decoration: none;">🗑️</a>
+        
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; margin-right: 120px;">

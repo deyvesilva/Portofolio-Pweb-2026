@@ -9,6 +9,7 @@ urlpatterns = [
     path('curriculo/', views.curriculo_view, name='curriculo'),
     path('tfc/', views.tfc_view, name='tfc'),
     #path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('sobre/', views.sobre_view, name='sobre'),
     
     # CRUD Projetos
     path('projeto/novo/', views.ProjetoCreateView.as_view(), name='projeto_novo'),

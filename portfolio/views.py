@@ -173,3 +173,10 @@ def dashboard_view(request):
 
     }
     return render(request, 'portfolio/dashboard.html', context)
+
+def sobre_view(request):
+    context = {
+        'tipos_tecnologia': TipoTecnologia.objects.all(),
+        'registos_making_of': MakingOf.objects.all().order_by('-id'), # O mais recente primeiro
+    }
+    return render(request, 'portfolio/sobre.html', context)

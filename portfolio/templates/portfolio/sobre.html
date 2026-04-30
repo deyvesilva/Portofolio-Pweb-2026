@@ -1,0 +1,181 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="sobre-container">
+    <header class="sobre-header">
+        <h1 class="main-title">⚙️ Sobre esta Aplicação</h1>
+        <p class="subtitle">Documentação técnica e registo de desenvolvimento do Portfólio PWeb 2026</p>
+    </header>
+
+    <section class="section-card">
+        <div class="section-icon"><i class="fas fa-layer-group"></i></div>
+        <h2>1. Arquitetura MVT do Django</h2>
+        <div class="grid-2">
+            <div class="image-box">
+                <p class="caption">Fluxo de informação e estrutura MVT (Rascunho manual).</p>
+            </div>
+            <div class="text-content">
+                <p>A aplicação segue o padrão <strong>MVT (Model-View-Template)</strong>, onde a lógica é desacoplada da apresentação:</p>
+                <ul class="custom-list">
+                    <li><strong>Model:</strong> Camada de abstração de dados (ORMDjango).</li>
+                    <li><strong>View:</strong> Processador de lógica e intermediário de dados.</li>
+                    <li><strong>Template:</strong> Motor de renderização dinâmica em HTML.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="video-box">
+            <h3>🎥 Vídeo Tutorial: Criação de Projetos</h3>
+            <div class="iframe-container">
+                <iframe src="https://www.youtube.com/embed/O_TEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="section-icon"><i class="fas fa-database"></i></div>
+        <h2>2. Modelação de Dados</h2>
+        <p>O Diagrama Entidade-Relação (DER) abaixo detalha a estrutura das tabelas e os seus relacionamentos (One-to-Many e Many-to-Many).</p>
+        <div class="der-container">
+            <img src="/media/makingof/diagrama_DER_portofolio_pweb.jpg" alt="Diagrama DER" class="img-fluid clickable-img">
+        </div>
+        <div class="code-preview">
+            <p><strong>Exemplo de Modelagem (models.py):</strong></p>
+            <pre><code>class Tecnologia(models.Model):
+    nome = models.CharField(max_length=100)
+    tipo = models.ForeignKey(TipoTecnologia, on_delete=models.CASCADE)
+    opiniao = models.TextField()</code></pre>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="section-icon"><i class="fas fa-code"></i></div>
+        <h2>3. Tecnologias Utilizadas</h2>
+        {% for tipo in tipos_tecnologia %}
+            <div class="tech-category">
+                <h3 class="tech-type-title">{{ tipo.nome }}</h3>
+                <div class="tech-grid">
+                    {% for tech in tipo.tecnologias.all %}
+                    <div class="tech-detail-card">
+                        <div class="tech-card-header">
+                            {% if tech.logo %}<img src="{{ tech.logo.url }}" class="mini-logo">{% endif %}
+                            <h4>{{ tech.nome }}</h4>
+                        </div>
+                        <p class="tech-desc">{{ tech.descricao }}</p>
+                        {% if tech.opiniao %}
+                        <div class="tech-opinion-box">
+                            <small>ANÁLISE CRÍTICA:</small>
+                            <p>{{ tech.opiniao }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="section-card">
+        <div class="section-icon"><i class="fas fa-sitemap"></i></div>
+        <h2>4. Mapa de Navegação</h2>
+        <div class="nav-map">
+            <div class="nav-node">Home</div>
+            <div class="nav-arrow">↓</div>
+            <div class="nav-subgrid">
+                <div class="nav-node secondary">Perfil</div>
+                <div class="nav-node secondary">Projetos</div>
+                <div class="nav-node secondary">Sobre</div>
+                <div class="nav-node action">Dashboard (Admin)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card github-highlight">
+        <div class="section-icon"><i class="fab fa-github"></i></div>
+        <h2>5. Repositório no GitHub</h2>
+        <p>Utilização do Git para versionamento semântico e colaboração contínua.</p>
+        <a href="https://github.com/deyvesilva/Portofolio-Pweb-2026" class="btn-modern-github" target="_blank">
+            <i class="fab fa-github"></i> Ver Código Fonte
+        </a>
+    </section>
+
+    <section class="section-card making-of-section">
+        <div class="section-icon"><i class="fas fa-tools"></i></div>
+        <h2>6. Making-Of: Logs de Desenvolvimento</h2>
+        <div class="making-of-timeline">
+            {% for m in registos_making_of %}
+            <div class="log-entry">
+                <div class="log-meta">LOG #{{ m.id }}</div>
+                <div class="log-body">
+                    <div class="log-item decision"><strong><i class="fas fa-check"></i> Decisão:</strong> {{ m.decisoes }}</div>
+                    <div class="log-item error"><strong><i class="fas fa-bug"></i> Erro/Desafio:</strong> {{ m.erros }}</div>
+                    <div class="log-item logic"><strong><i class="fas fa-brain"></i> Justificação:</strong> {{ m.justificacoes }}</div>
+                    <div class="log-item ai"><strong><i class="fas fa-robot"></i> Uso de IA:</strong> {{ m.uso_ia }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+<style>
+    /* Variáveis e Reset */
+    :root { --dark: #2d3748; --accent: #3182ce; --bg: #f7fafc; --white: #ffffff; }
+    
+    .sobre-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: 'Inter', sans-serif; }
+    .sobre-header { text-align: center; margin-bottom: 50px; }
+    .main-title { font-size: 2.8rem; color: var(--dark); font-weight: 800; margin-bottom: 10px; }
+    .subtitle { color: #718096; font-size: 1.1rem; }
+
+    /* Cards */
+    .section-card { 
+        background: var(--white); 
+        padding: 40px; 
+        border-radius: 20px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        margin-bottom: 40px; 
+        position: relative;
+        border: 1px solid #edf2f7;
+    }
+    .section-icon {
+        position: absolute; top: -20px; right: 40px;
+        background: var(--dark); color: white;
+        width: 50px; height: 50px; border-radius: 12px;
+        display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+
+    /* Grelhas e Layout */
+    .grid-2 { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+    .img-fluid { width: 100%; border-radius: 15px; border: 1px solid #e2e8f0; transition: transform 0.3s; cursor: pointer; }
+    .img-fluid:hover { transform: scale(1.02); }
+
+    /* Tecnologias */
+    .tech-type-title { color: var(--accent); border-bottom: 2px solid #ebf8ff; padding-bottom: 10px; margin: 30px 0 20px; }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .tech-detail-card { background: #f8fafc; padding: 20px; border-radius: 15px; border: 1px solid #e2e8f0; }
+    .tech-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .mini-logo { width: 30px; height: 30px; object-fit: contain; }
+    .tech-opinion-box { margin-top: 15px; padding: 12px; background: #fff; border-left: 3px solid var(--accent); border-radius: 4px; font-style: italic; font-size: 0.9rem; }
+
+    /* Making-Of Timeline */
+    .making-of-timeline { display: flex; flex-direction: column; gap: 30px; }
+    .log-entry { border: 1px solid #edf2f7; border-radius: 15px; overflow: hidden; }
+    .log-meta { background: var(--dark); color: white; padding: 8px 20px; font-family: monospace; font-size: 0.9rem; }
+    .log-body { padding: 25px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .log-item { font-size: 0.9rem; line-height: 1.6; }
+    .log-item strong { display: block; margin-bottom: 5px; font-size: 0.75rem; text-transform: uppercase; }
+    .decision { color: #2f855a; } .error { color: #c53030; } .ai { color: #6b46c1; }
+
+    /* Botões e Outros */
+    .btn-modern-github { 
+        display: inline-flex; align-items: center; gap: 10px;
+        background: #1a202c; color: white; padding: 15px 30px;
+        border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s;
+    }
+    .btn-modern-github:hover { transform: translateY(-3px); background: #000; }
+    .iframe-container { position: relative; padding-bottom: 56.25%; height: 0; margin-top: 20px; }
+    .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 15px; }
+
+    @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+</style>
+{% endblock %}

@@ -1,6 +1,13 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+# Novo modelo para classificar: frontend, backend, etc.
+class TipoTecnologia(models.Model):
+    nome = models.CharField(max_length=50) # Ex: Frontend, Backend, Outros
+
+    def __str__(self):
+        return self.nome
+
 #Licenciatura 
 class Licenciatura(models.Model):
     nome = models.CharField(max_length=100)
@@ -22,10 +29,15 @@ class Perfil(models.Model):
 #Tecnologia
 class Tecnologia(models.Model):
     nome = models.CharField(max_length=100)
-    descricao = models.TextField(max_length=255)
+    descricao = models.TextField(max_length=1000) # Aumentei o limite para caber a explicação do enunciado
+    
+    
+    opiniao = models.TextField(blank=True, null=True, help_text="O que gostou ou não nesta tecnologia")
+    tipo = models.ForeignKey(TipoTecnologia, on_delete=models.SET_NULL, null=True, blank=True, related_name='tecnologias')
+    
+    
     website = models.URLField(blank=True, null=True)
     logo = models.ImageField(upload_to='tecnologias/', blank=True, null=True)
-
     nivel = models.IntegerField(
         choices=[
             (1, '1 - Básico'),
