@@ -4,9 +4,17 @@ from . import views
 app_name = 'accounts'
 
 urlpatterns = [
+    # --- Autenticação Tradicional ---
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.register_view, name='register'),
-    path('magic-link/', views.magic_link_request, name='magic_link_request'),
-    path('magic-login/<uidb64>/<token>/', views.magic_login, name='magic_login'),
+
+    # --- Autenticação por Link Mágico ---
+    # O 'name' tem de ser exatamente 'solicitar_link' para o teu template funcionar
+    path('solicitar-link/', views.solicitar_link, name='solicitar_link'),
+    
+    path('validar/<str:username>/<str:token>/', views.validar_link, name='validar_magic_link'),
+
+    # --- Páginas de Destino ---
+    path('dashboard/', views.dashboard_view, name='dashboard'),
 ]

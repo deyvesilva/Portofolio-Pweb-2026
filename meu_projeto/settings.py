@@ -132,4 +132,12 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'home' # Após sair, volta para a página inicial pública
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'deyvedasilva12@gmail.com'
+EMAIL_HOST_PASSWORD = 'rucz mrnd okvv zbgj' # Gerada na conta Google
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

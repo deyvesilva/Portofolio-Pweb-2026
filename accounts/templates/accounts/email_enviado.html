@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail Enviado - Magic Link</title>
+</head>
+<body style="background-color: #f7fafc; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif;">
+
+    {% block content %}
+    <div style="max-width: 500px; width: 90%; text-align: center; border: 1px solid #e2e8f0; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: white;">
+        
+        <div style="font-size: 50px; margin-bottom: 20px;">📧</div>
+        
+        <h2 style="color: #2d3748; margin-top: 0;">Verifica o teu e-mail!</h2>
+        
+        <p style="color: #4a5568; line-height: 1.6;">
+            Enviámos um <strong>Link Mágico</strong> para o endereço que introduziste.<br>
+            Clica no link contido na mensagem para entrares automaticamente na tua conta.
+        </p>
+        
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #edf2f7;">
+        
+        <p style="font-size: 0.9em; color: #718096;">
+            Não recebeste? Verifica a pasta de Spam ou 
+            <a href="{% url 'accounts:solicitar_link' %}" style="color: #3182ce; text-decoration: none; font-weight: bold;">tenta novamente</a>.
+        </p>
+        
+        <div style="margin-top: 30px;">
+            <a href="{% url 'accounts:login' %}" style="text-decoration: none; color: #4a5568; font-size: 0.9em; border-bottom: 1px solid #cbd5e0; padding-bottom: 2px;">
+                ← Voltar ao login
+            </a>
+        </div>
+        
+    </div>
+    {% endblock %}
+
+</body>
+</html>
