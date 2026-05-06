@@ -114,3 +114,17 @@ def dashboard_view(request):
     return render(request, 'accounts/dashboard.html', {
         'user': request.user
     })
+    
+    from django.contrib.auth.models import Group
+
+def register_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            # Garante que o grupo existe e adiciona o utilizador
+            grupo_autores, created = Group.objects.get_or_create(name='autores')
+            user.groups.add(grupo_autores)
+            login(request, user)
+            return redirect('artigos:lista')
+   

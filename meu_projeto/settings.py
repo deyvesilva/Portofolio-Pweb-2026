@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     "portfolio",
     "escola",
-    "accounts"
+    "accounts",
+    "artigos"
 ]
 
 MIDDLEWARE = [

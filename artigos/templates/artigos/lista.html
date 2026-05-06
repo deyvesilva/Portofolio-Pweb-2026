@@ -1,0 +1,32 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+<div style="max-width: 1000px; margin: 40px auto; padding: 0 20px; font-family: sans-serif;">
+    <h1 style="color: #2d3748; border-bottom: 2px solid #3182ce; padding-bottom: 10px;">Artigos Tecnológicos & Soft-Skills</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 30px;">
+        {% for artigo in artigos %}
+            <div style="border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: white; shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                {% if artigo.fotografia %}
+                    <img src="{{ artigo.fotografia.url }}" alt="{{ artigo.titulo }}" style="width: 100%; height: 200px; object-fit: cover;">
+                {% endif %}
+                
+                <div style="padding: 20px;">
+                    <h2 style="margin: 0 0 10px 0; font-size: 1.25em;">
+                        <a href="{% url 'artigos:detalhe' artigo.id %}" style="text-decoration: none; color: #2d3748;">{{ artigo.titulo }}</a>
+                    </h2>
+                    <p style="color: #718096; font-size: 0.9em;">Por <strong>{{ artigo.autor.username }}</strong> em {{ artigo.data_criacao|date:"d/m/Y" }}</p>
+                    <p style="color: #4a5568; line-height: 1.5;">{{ artigo.conteudo|truncatewords:20 }}</p>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+                        <span style="color: #e53e3e;">❤️ {{ artigo.total_likes }} likes</span>
+                        <a href="{% url 'artigos:detalhe' artigo.id %}" style="color: #3182ce; font-weight: bold; text-decoration: none;">Ler mais →</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>Ainda não foram publicados artigos. {% if user.is_staff %}<a href="/admin/artigos/artigo/add/">Cria o primeiro aqui!</a>{% endif %}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
