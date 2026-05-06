@@ -1,0 +1,33 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+<div style="max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: white;">
+    <h2>Entrar no Portfólio</h2>
+    
+    <!-- Formulário de Login Normal -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="background: #2d3748; color: white; padding: 10px 20px; border: none; border-radius: 5px; width: 100%; cursor: pointer;">
+            Entrar
+        </button>
+    </form>
+
+    <!-- Divisória para o Link Mágico -->
+    <div style="margin: 25px 0; text-align: center; border-top: 1px solid #eee; position: relative;">
+        <span style="position: absolute; top: -12px; background: white; padding: 0 10px; color: #718096; font-size: 0.9em; left: 50%; transform: translateX(-50%);">ou</span>
+    </div>
+
+    <!-- Opção de Link Mágico -->
+    <div style="text-align: center;">
+        <p style="font-size: 0.9em; color: #4a5568; margin-bottom: 10px;">Esqueceu-se da senha ou prefere um acesso rápido?</p>
+        <a href="{% url 'accounts:magic_link_request' %}" style="display: block; padding: 10px; border: 1px solid #2d3748; color: #2d3748; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s;" onmouseover="this.style.background='#f7fafc'" onmouseout="this.style.background='transparent'">
+            ✨ Entrar com Link Mágico
+        </a>
+    </div>
+
+    <p style="margin-top: 20px; text-align: center; font-size: 0.9em;">
+        Ainda não tem conta? <a href="{% url 'accounts:register' %}" style="color: #3182ce;">Registe-se aqui</a>.
+    </p>
+</div>
+{% endblock %}

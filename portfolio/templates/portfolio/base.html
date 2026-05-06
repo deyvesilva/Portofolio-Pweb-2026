@@ -6,11 +6,43 @@
     <title>Deyve Silva</title>
     <style>
         body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8fafc; color: #1a202c; }
-        nav { background: #1a202c; padding: 1rem; display: flex; justify-content: center; gap: 20px; }
+        nav { background: #1a202c; padding: 1rem; display: flex; justify-content: center; gap: 20px; align-items: center; }
         nav a { color: #cbd5e0; text-decoration: none; font-weight: 500; text-transform: uppercase; font-size: 0.8em; letter-spacing: 1px; }
         nav a:hover { color: white; }
         main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
         .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        .nav-admin-link {
+            color: #718096;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            padding: 5px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        .nav-admin-link:hover {
+            background-color: #f7fafc;
+            color: #2d3748;
+            border-color: #cbd5e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Estilo para as mensagens de alerta */
+        .alert-container {
+            margin-bottom: 25px;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid;
+            font-weight: 500;
+        }
+        .alert-success { background-color: #c6f6d5; color: #22543d; border-color: #9ae6b4; }
+        .alert-error { background-color: #fed7d7; color: #822727; border-color: #feb2b2; }
     </style>
 </head>
 <body>
@@ -21,37 +53,41 @@
         <a href="{% url 'projetos' %}">Projetos</a>
         <a href="{% url 'tecnologias' %}">Tecnologias</a>
         <a href="{% url 'sobre' %}">Sobre a Aplicação</a>
+        
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'accounts:logout' %}" style="color: #feb2b2; margin-left: 20px;">Sair</a>
+        {% else %}
+            <a href="{% url 'accounts:login' %}" style="color: #9ae6b4; margin-left: 20px;">Entrar</a>
+        {% endif %}
     </nav>
+
     <main>
+        <!-- BLOCO DE MENSAGENS DO DJANGO -->
+        {% if messages %}
+            <div class="alert-container">
+                {% for message in messages %}
+                    <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-error{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
         {% block content %}{% endblock %}
     </main>
+
+    <footer style="padding: 20px; text-align: center; border-top: 1px solid #e2e8f0; margin-top: 40px;">
+        <p>© 2026 Deyve Silva</p>
+        
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser or request.user.groups.all.0.name == 'gestor-portfolio' %}
+                <div style="margin-top: 10px;">
+                    <a href="{% url 'dashboard' %}" class="nav-admin-link">
+                        <span style="margin-right: 5px;">⚙️</span> Gestão
+                    </a>
+                </div>
+            {% endif %}
+        {% endif %}
+    </footer>
 </body>
-<footer>
-    <p>© 2026 Deyve Silva</p>
-    <li style="margin-left: auto;"> 
-    <a href="{% url 'dashboard' %}" class="nav-admin-link">
-        <span style="margin-right: 5px;">⚙️</span> Gestão
-    </a>
-</li>
-
-<style>
-    .nav-admin-link {
-        color: #718096; /* Cor cinza suave para não berrar */
-        text-decoration: none;
-        font-size: 0.9em;
-        font-weight: 500;
-        padding: 5px 12px;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-    }
-
-    .nav-admin-link:hover {
-        background-color: #f7fafc;
-        color: #2d3748;
-        border-color: #cbd5e0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-</style>
-</footer>
 </html>

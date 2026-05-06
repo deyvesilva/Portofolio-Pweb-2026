@@ -1,14 +1,19 @@
 from django.urls import path
 from . import views
 
+
+
 urlpatterns = [
-    path('', views.home_view, name='home'), # Agora a raiz é a Home
+    path('', views.home_view, name='home'),
     path('tecnologias/', views.tecnologias_view, name='tecnologias'),
     path('licenciatura/', views.licenciatura_view, name='licenciatura'),
     path('projetos/', views.projetos_view, name='projetos'),
     path('curriculo/', views.curriculo_view, name='curriculo'),
     path('tfc/', views.tfc_view, name='tfc'),
-    #path('dashboard/', views.dashboard_view, name='dashboard'),
+    
+    # IMPORTANTE: Descomentei o dashboard para o botão de gestão funcionar
+    path('dashboard/', views.dashboard_view, name='dashboard'), 
+    
     path('sobre/', views.sobre_view, name='sobre'),
     
     # CRUD Projetos
@@ -27,7 +32,7 @@ urlpatterns = [
     path('uc/<int:pk>/editar/', views.UCUpdateView.as_view(), name='uc_editar'),
     path('uc/<int:pk>/eliminar/', views.UCDeleteView.as_view(), name='uc_eliminar'),
     
-    #CRUD competencias
+    # CRUD competencias
     path('competencia/nova/', views.CompetenciaCreateView.as_view(), name='competencia_nova'),
     path('competencia/<int:pk>/editar/', views.CompetenciaUpdateView.as_view(), name='competencia_editar'),
     path('competencia/<int:pk>/eliminar/', views.CompetenciaDeleteView.as_view(), name='competencia_eliminar'),

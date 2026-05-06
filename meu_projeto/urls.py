@@ -22,15 +22,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
 from portfolio import views as portfolio_views
+from django.views.generic.base import RedirectView  
 
 def home(request):
     return HttpResponse("Bem vindo ao meu portofolio ou a aplicação 'ESCOLA' da ficha 7, Para ver o Portofolio, adicione '/admin' ao link, para ver a escola, faça '/escola' ao link")
 
 urlpatterns = [
     path('', include('portfolio.urls')),
+    path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
     path("escola/", include("escola.urls")),       #     <- rota para aplicação web escola
-    path("", include("escola.urls")),  #  rota para app escola sem precisar de escrever "escola"
     path('portfolio/', include('portfolio.urls')), # Incluir a app de portfólio
     path('dashboard/', portfolio_views.dashboard_view, name='dashboard'),
 ]

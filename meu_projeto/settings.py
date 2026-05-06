@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     "portfolio",
     "escola",
+    "accounts"
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,11 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 # Opcional, mas recomendado para o WhiteNoise
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+# --- CONFIGURAÇÕES DE AUTENTICAÇÃO ADICIONADAS ---
+
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'home' # Após sair, volta para a página inicial pública
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
