@@ -1,0 +1,19 @@
+# Ambiente Virtual (O mais importante agora!)
+venv/
+.venv/
+env/
+
+# Ficheiros do Python (Compilados)
+__pycache__/
+*.py[cod]
+
+# Base de dados (Normalmente não queremos a DB local no Git)
+db.sqlite3
+
+# Ficheiros de sistema e IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Pasta de Media (Uploads locais)
+media/
