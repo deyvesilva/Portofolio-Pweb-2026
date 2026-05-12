@@ -1,0 +1,1552 @@
+[
+{
+  "model": "portfolio.licenciatura",
+  "pk": 4,
+  "fields": {
+    "nome": "Informática de Gestão",
+    "universidade": "Universidade Lusófona",
+    "descricao": "A licenciatura de Informática de Gestão colmata uma das principais necessidades das empresas, em particular no aproximar as áreas de negócio (Marketing, Vendas, Operações, etc.) com as áreas principais de Tecnologias e Sistemas de Informação. \r\nSaber falar negócio e tecnologia é essencial, pois são \"linguagens\" diferentes. Apenas colaboradores capazes de entender a forma como as empresas se estruturam e posicionam nos seus mercados, associado a conhecimentos tecnológicos, poderão potenciar um perfeito alinhamento Tecnologia-Negócio."
+  }
+},
+{
+  "model": "portfolio.perfil",
+  "pk": 1,
+  "fields": {
+    "nome": "Deyve Silva",
+    "idade": 22,
+    "bio": "Atualmente, estou aprimorando minhas habilidades em dados, sistemas de informação e otimização de processos de negócios.\r\nMeus estudos envolvem design de banco de dados, desenvolvimento de aplicativos e modelagem de processos, com foco no uso da tecnologia para apoiar a tomada de decisões e melhorar as operações de negócios. Tenho particular interesse em projetos relacionados à transformação digital e soluções orientadas a dados."
+  }
+},
+{
+  "model": "portfolio.tecnologia",
+  "pk": 1,
+  "fields": {
+    "nome": "Java",
+    "descricao": "Usada em aplicações empresariais, sistemas backend e apps Android.\r\nA sua função é criar sistemas robustos, escaláveis e multiplataforma.",
+    "opiniao": null,
+    "tipo": null,
+    "website": "https://www.java.com/pt-BR/",
+    "logo": "tecnologias/5968282.png",
+    "nivel": 4
+  }
+},
+{
+  "model": "portfolio.tecnologia",
+  "pk": 2,
+  "fields": {
+    "nome": "SQL",
+    "descricao": "Usada para gerir e consultar bases de dados relacionais.\r\nA sua função é armazenar, consultar e organizar dados de forma estruturada.",
+    "opiniao": null,
+    "tipo": null,
+    "website": "https://www.mysql.com/",
+    "logo": "tecnologias/image2-1.webp",
+    "nivel": 3
+  }
+},
+{
+  "model": "portfolio.tecnologia",
+  "pk": 3,
+  "fields": {
+    "nome": "UI Path",
+    "descricao": "Usada para automação de processos empresariais (RPA) em tarefas repetitivas.\r\nA sua função é reduzir trabalho manual através de robôs que executam ações.",
+    "opiniao": null,
+    "tipo": null,
+    "website": "https://www.uipath.com/pt",
+    "logo": "tecnologias/UiPath-Emblem.png",
+    "nivel": 3
+  }
+},
+{
+  "model": "portfolio.tecnologia",
+  "pk": 4,
+  "fields": {
+    "nome": "Python",
+    "descricao": "Usada em desenvolvimento de software, automação, análise de dados e inteligência artificial.\r\nA sua função é criar programas de forma rápida, simples e flexível.",
+    "opiniao": null,
+    "tipo": null,
+    "website": "https://www.python.org/",
+    "logo": "tecnologias/python.png",
+    "nivel": 3
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 1,
+  "fields": {
+    "nome": "Proatividade"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 2,
+  "fields": {
+    "nome": "Trabalho sob Pressão"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 3,
+  "fields": {
+    "nome": "Tomada de Decisão"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 4,
+  "fields": {
+    "nome": "Aprendizagem rápida"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 5,
+  "fields": {
+    "nome": "Adaptabilidade"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 6,
+  "fields": {
+    "nome": "Trabalho em equipe e colaboração"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 7,
+  "fields": {
+    "nome": "Pensamento estratégico"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 8,
+  "fields": {
+    "nome": "Resolução de problemas"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 9,
+  "fields": {
+    "nome": "Estruturar Dados"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 10,
+  "fields": {
+    "nome": "Modelar Dados"
+  }
+},
+{
+  "model": "portfolio.competencia",
+  "pk": 11,
+  "fields": {
+    "nome": "Automação de tarefas"
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 24,
+  "fields": {
+    "nome": "Contabilidade",
+    "ano": 1,
+    "semestre": 1,
+    "descricao": "Princípios contabilísticos, demonstrações financeiras e análise de informação económica e financeira.",
+    "imagem": "ucs/contabilidade.avif",
+    "licenciatura": 4,
+    "Nome_do_Docente": "LEE DOO HIENG",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 25,
+  "fields": {
+    "nome": "Fundamentos de Sistemas de Informação",
+    "ano": 1,
+    "semestre": 1,
+    "descricao": "Conceitos base de sistemas de informação, arquitetura de sistemas e papel dos SI nas organizações.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "José Brás",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 26,
+  "fields": {
+    "nome": "Matemática I",
+    "ano": 1,
+    "semestre": 1,
+    "descricao": "Conceitos matemáticos fundamentais aplicados à computação, incluindo álgebra, funções, matrizes e lógica matemática.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Sofia Naique",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 27,
+  "fields": {
+    "nome": "Teoria e Prática de Marketing",
+    "ano": 1,
+    "semestre": 1,
+    "descricao": "Fundamentos de marketing, análise de mercado, comportamento do consumidor e estratégias de posicionamento.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 28,
+  "fields": {
+    "nome": "Algoritmia e Estruturas de Dados",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Estudo de algoritmos fundamentais e estruturas de dados clássicas (arrays, listas, stacks, queues, árvores e grafos), incluindo análise de complexidade temporal e espacial.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Pedro Alves",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 29,
+  "fields": {
+    "nome": "Cálculo Financeiro",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "ucs/gestao_financeira_EWwgD2Z.png",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Rui Lopes Cardoso",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 30,
+  "fields": {
+    "nome": "Competências Comportamentais",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Desenvolvimento de soft skills, comunicação, trabalho em equipa, liderança e gestão de conflitos.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 31,
+  "fields": {
+    "nome": "Fundamentos de Programação",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Introdução aos paradigmas de programação, com foco em lógica computacional, estruturas de controlo, funções, tipos de dados e resolução de problemas algorítmicos. Desenvolvimento de competências básicas em programação estruturada. (Em Kotlin)",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Pedro Alves",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 32,
+  "fields": {
+    "nome": "Linguagens de Programação I",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Aprofundamento de programação imperativa e orientada a objetos, incluindo encapsulamento, herança, polimorfismo e manipulação de estruturas de dados.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 33,
+  "fields": {
+    "nome": "Matemática II",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Extensão de métodos matemáticos com ênfase em cálculo diferencial e integral, probabilidade e aplicações em modelação computacional.",
+    "imagem": "ucs/matematica.jpg",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 34,
+  "fields": {
+    "nome": "Métricas Empresariais",
+    "ano": 1,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "José Pratas",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 35,
+  "fields": {
+    "nome": "Bases de Dados",
+    "ano": 2,
+    "semestre": 1,
+    "descricao": "Introdução ao modelo relacional, modelação conceptual (ER), normalização e implementação de bases de dados em SQL.",
+    "imagem": "ucs/base_de_dados_Bmf3Qvh.png",
+    "licenciatura": 4,
+    "Nome_do_Docente": "João Caldeira",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 36,
+  "fields": {
+    "nome": "Direito Informático",
+    "ano": 2,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "ucs/direito_informatico.webp",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 37,
+  "fields": {
+    "nome": "Instrumentos de Gestão",
+    "ano": 2,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Rui Lopes Cardoso",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 38,
+  "fields": {
+    "nome": "Motivação e Liderança",
+    "ano": 2,
+    "semestre": 1,
+    "descricao": "Teorias de motivação, liderança organizacional, comportamento humano e gestão de equipas.",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 39,
+  "fields": {
+    "nome": "Programação Low-Code e No-Code",
+    "ano": 2,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "José Brás",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 40,
+  "fields": {
+    "nome": "Sistemas Operativos",
+    "ano": 2,
+    "semestre": 1,
+    "descricao": "Princípios de sistemas operativos, gestão de processos, memória, sistemas de ficheiros e concorrência.",
+    "imagem": "ucs/sistemas_opertaivos.png",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Paulo Guedes",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 41,
+  "fields": {
+    "nome": "Engenharia de Requisitos e Testes",
+    "ano": 2,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "ucs/AJOLLY_Testing_Quality_Engineering.webp",
+    "licenciatura": 4,
+    "Nome_do_Docente": "José Brás",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 42,
+  "fields": {
+    "nome": "Gestão Financeira",
+    "ano": 2,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "ucs/gestao_financeira.png",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 43,
+  "fields": {
+    "nome": "Programação Web",
+    "ano": 2,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "ucs/6352331.png",
+    "licenciatura": 4,
+    "Nome_do_Docente": "Lúcio Studer",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 44,
+  "fields": {
+    "nome": "Redes de Computadores",
+    "ano": 2,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": "João Craveiro",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 45,
+  "fields": {
+    "nome": "Sistemas de Suporte à Decisão",
+    "ano": 2,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "ucs/ssd.jpg",
+    "licenciatura": 4,
+    "Nome_do_Docente": "João Caldeira",
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 46,
+  "fields": {
+    "nome": "Trabalho Final de Curso",
+    "ano": 3,
+    "semestre": 0,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 47,
+  "fields": {
+    "nome": "Data Mining",
+    "ano": 3,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "ucs/data_mining.avif",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 48,
+  "fields": {
+    "nome": "Engenharia de Software",
+    "ano": 3,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 49,
+  "fields": {
+    "nome": "Interação Humano-Máquina",
+    "ano": 3,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 50,
+  "fields": {
+    "nome": "Sistemas Móveis Empresariais",
+    "ano": 3,
+    "semestre": 1,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 51,
+  "fields": {
+    "nome": "Auditoria de Sistemas de Informação",
+    "ano": 3,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 52,
+  "fields": {
+    "nome": "Controlo de Gestão",
+    "ano": 3,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 53,
+  "fields": {
+    "nome": "Gestão de Projetos",
+    "ano": 3,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 54,
+  "fields": {
+    "nome": "Inteligência Artificial",
+    "ano": 3,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.unidadecurricular",
+  "pk": 55,
+  "fields": {
+    "nome": "Sistemas de Informação na Nuvem",
+    "ano": 3,
+    "semestre": 2,
+    "descricao": "Importado da API",
+    "imagem": "",
+    "licenciatura": 4,
+    "Nome_do_Docente": null,
+    "Pagina_do_Docente": null
+  }
+},
+{
+  "model": "portfolio.projeto",
+  "pk": 2,
+  "fields": {
+    "nome": "DeisiIMDb",
+    "descricao": "O projeto DEISI-IMBD consistiu no desenho e implementação de uma base de dados relacional em SQL, com o objetivo de recriar um sistema de gestão de informação de filmes semelhante ao IMDb, aplicando os princípios fundamentais de modelação conceptual, lógica e física de bases de dados.\r\n\r\nNa fase inicial foi desenvolvido o modelo conceptual (modelo Entidade-Relacionamento), onde foram identificadas as principais entidades do sistema — Movies, Genres, Actors, Directors, Movie_Votes, Continent, Country, Platform, AgeRating e Interaction — bem como as suas relações, cardinalidades e restrições de integridade. Este modelo permitiu estruturar a informação e definir as regras de negócio do sistema, incluindo relações muitos-para-muitos entre filmes e atores, filmes e géneros, e filmes e plataformas.\r\n\r\nDe seguida foi construído o modelo relacional, através da transformação do modelo ER em tabelas normalizadas, garantindo a aplicação das formas normais (até 3FN, quando aplicável). Nesta fase foram definidas chaves primárias, chaves estrangeiras e tabelas de associação para suportar relações N:M, assegurando a integridade referencial e a consistência dos dados.\r\n\r\nPosteriormente foi desenvolvido o modelo físico, onde o esquema relacional foi implementado numa base de dados SQL. Foram criadas as tabelas com instruções DDL (CREATE TABLE), definindo tipos de dados adequados, constraints (PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE) e regras de integridade. Foram também considerados aspetos de otimização e estruturação física dos dados.\r\n\r\nPor fim, foi realizada a implementação e manipulação dos dados através de SQL, incluindo operações de inserção (INSERT), atualização (UPDATE) e eliminação (DELETE), bem como a execução de queries complexas com JOINs, agregações, subqueries e filtros avançados, permitindo a análise de informação como rankings de filmes, médias de avaliações, filtragem por género, e relações entre atores, realizadores e filmes.\r\n\r\nEm síntese, o projeto consistiu no desenvolvimento completo de uma base de dados relacional, desde a modelação conceptual até à implementação física em SQL, assegurando integridade, normalização e capacidade de consulta eficiente da informação.",
+    "data_de_inicio": "2025-10-09",
+    "data_de_fim": "2026-01-11",
+    "github": "https://github.com/deyvejaciralaeekgroup01-lang/base_de_dados_cinena2026Lusofono",
+    "logo": "projetos/IMDb_uGNDsnH.jpg",
+    "uc": 35,
+    "tecnologias": [
+      2
+    ],
+    "competencias": [
+      1,
+      2,
+      6,
+      8,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "portfolio.experiencia",
+  "pk": 1,
+  "fields": {
+    "empresa": "Sabores de Angola",
+    "cargo": "Assistente de loja",
+    "descricao": "Responsável pelo atendimento ao cliente e pela gestão autônoma da loja. Auxiliava nas vendas, reposição de produtos e organização de mercadorias. Gerenciava as redes sociais da loja e monitorava os pedidos, contribuindo para o bom funcionamento das operações diárias.",
+    "data_de_inicio": "2025-07-01",
+    "data_de_fim": "2025-09-30",
+    "perfil": 1,
+    "tecnologias": [],
+    "competencias": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "portfolio.formacao",
+  "pk": 1,
+  "fields": {
+    "nome": "Introdução à Segurança da Informação",
+    "entidade": "Ignít - A Claranet Portugal Company",
+    "data_de_inicio": "2025-03-18",
+    "data_de_fim": "2025-03-19",
+    "descricao": "Durante dois dias na Claranet Lisboa, aprendi sobre o DORA, que garante a resiliência digital das instituições financeiras, o NIS2, que fortalece a segurança de redes em toda a Europa, que me permitiu  mergulhar mais fundo no mundo da tecnologia e da segurança da informação. Foi uma experiência intensa e enriquecedora, repleta de aprendizado e compartilhamento de conhecimento.",
+    "perfil": 1,
+    "competencias": [
+      4
+    ]
+  }
+},
+{
+  "model": "portfolio.formacao",
+  "pk": 2,
+  "fields": {
+    "nome": "Automation 2.0 : From Rule-Based Bots to Intelligent Agents",
+    "entidade": "CGI",
+    "data_de_inicio": "2026-03-09",
+    "data_de_fim": "2026-03-12",
+    "descricao": "Durante esta semana, aprendemos a usar RPA, ou seja, robôs que facilitam os trabalhos repetitivos de empresas.\r\nTivemos sessões teóricas e práticas de como e onde usar os mesmos que serviu de grande aprendizado onde os Oradores/Instrutores foram muito acolhedores e pacientes, que de certa forma ajudou muito no processo de aprendizagem.\r\nParticularmente, gostei muito de aprender a modelar/criar um sistema RPA que definitivamente levarei para minha vida.",
+    "perfil": 1,
+    "competencias": [
+      1,
+      2,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 883,
+  "fields": {
+    "titulo": "Abordagens não supervisionadas para deteção de reviews falsas em plataformas de e-commerce",
+    "descricao": "O crescimento do e-commerce trouxe um aumento significativo nas avaliações, que desempenham um papel determinante nas decisões de compra dos consumidores. Contudo, o fenómeno das fake reviews compromete a confiança nas plataformas digitais, prejudicando tanto os consumidores como as empresas. Este trabalho propõe a aplicação de técnicas de aprendizagem automatizada, como o algoritmo K-Means, e de modelos avançados baseados em redes neuronais, com o objetivo de identificar padrões associados a avaliações falsas. Recorrendo a um conjunto de dados da Amazon, recolhido entre 1996 e 2023, serão analisadas métricas comportamentais e linguísticas que possibilitam a distinção entre avaliações genuínas e falsas. Este estudo sublinha a relevância de métodos inovadores e integrados para enfrentar os desafios da manipulação de avaliações, promovendo um ambiente de comércio digital mais mais transparente e fiável.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_1%C2%BA_entrega.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Detecting-Fake-Reviews.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 884,
+  "fields": {
+    "titulo": "AdvenTour",
+    "descricao": "Este trabalho propõe o desenvolvimento da aplicação mobile AdvenTour, focada no turismo de aventura, um segmento que tem registado um crescimento notável nos últimos anos. De acordo com relatórios da Organização Mundial do Turismo, cerca de 40% dos turistas globais procuram experiências autênticas e emocionantes, enquanto o mercado de turismo de aventura cresce a uma taxa anual aproximada de 10%. A AdvenTour visa ser uma plataforma centralizada para que os turistas planeiem e encontrem informações sobre aventuras radicais, oferecendo uma interface simples e intuitiva para explorar e partilhar atividades emocionantes. Adicionalmente, a AdvenTour fomenta uma comunidade global de aventureiros, permitindo avaliações de utilizadores, interação direta entre membros e criação de itinerários personalizáveis. Este TFC concentra-se na conceção e desenvolvimento de funcionalidades que ajudam os utilizadores a navegar por experiências em diferentes países, fornecer feedback e planear itinerários de forma prática e eficiente. Ao centralizar dados, facilitar o planeamento de viagens e conectar aventureiros, a AdvenTour resolve o problema real da dispersão de informações no turismo de aventura, simplificando o processo para viajantes que procuram experiências fora do comum e contribuindo para o crescimento sustentável do setor, promovendo atividades de aventura que respeitem o meio ambiente e as culturas locais. Pode ajudar a reduzir a sobrecarga dos destinos turísticos populares permitindo que as comunidades locais fora dos grandes centros turísticos beneficiem economicamente, promovendo uma distribuição mais equitativa dos lucros gerados pelo turismo de aventura.",
+    "link": "",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/AdvenTour.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 885,
+  "fields": {
+    "titulo": "Aplicativo para gestão de voluntários e auxilio de associações de animais",
+    "descricao": "Este projeto consiste no desenvolvimento de uma aplicação móvel, que posteriormente será convertida para uma plataforma web. A ideia central da aplicação é criar uma plataforma que facilite e incentive o envolvimento das pessoas com os animais das associações de proteção animal, promovendo uma maior interação e visibilidade tanto para os animais quanto para as instituições. A aplicação permitirá que as associações criem perfis onde poderão apresentar informações sobre si mesmas e individualmente sobre os seus animais disponíveis para interação. Os utilizadores, por sua vez, poderão criar um perfil e ter acesso aos animais, com a possibilidade de agendar diretamente atividades, como passeios com cães. Para garantir a segurança e o bem-estar dos animais, será necessário que os utilizadores aceitem e cumpram os termos de responsabilidade apresentados na aplicação, previamente estabelecidos pelas associações. Esta ferramenta visa eliminar barreiras comuns ao voluntariado, como a dificuldade de contacto telefónico ou a necessidade de deslocação sem garantia de disponibilidade. Através da aplicação, as associações receberão notificações de pedidos e comprometer-se-ão a responder dentro de um prazo razoável, mantendo o processo organizado e ágil. Os utilizadores também terão informações claras sobre o estado dos seus pedidos. Além de melhorar a logística e o acesso ao voluntariado, a aplicação promove uma maior socialização dos animais, ajudando-os a interagir com um maior número de pessoas. Este contacto regular com novos rostos pode ser especialmente benéfico para animais que passaram por situações de abandono ou maus-tratos, ajudando-os a recuperar a confiança nos humanos. Por fim, a aplicação coloca sempre o bem-estar dos animais em primeiro lugar, permitindo que cada associação decida o que é melhor para os seus protegidos, respeitando as suas particularidades. O objetivo final é simplificar o processo de envolvimento das pessoas com esta causa e fortalecer a relação entre a comunidade e as associações, contribuindo para o bem-estar dos animais e o aumento das iniciativas de apoio, voluntariado e adoção.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_Aluno2116_AnimalTinder.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/imagemAplica%C3%A7%C3%A3o.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 886,
+  "fields": {
+    "titulo": "Aplicação Móvel de Audiolivros Infantis",
+    "descricao": "Este TFC consiste no desenvolvimento e implementação de uma aplicação móvel destinada a disponibilizar audiolivros infantis, bem como a permitir a gravação de audiolivros ou até mesmo histórias imaginadas pelos pais. A oportunidade de criar esta aplicação surgiu em colaboração com a Associação Nacional de Glaucoma Pediátrico, que visa em apoiar as crianças com esta condição. A aplicação tem como objetivo beneficiar não só estas crianças, como também os seus familiares, oferecendo uma plataforma comunitária onde estes possam gravar audiolivros e partilhá-los numa biblioteca acessível através da mesma aplicação. O projeto abrange todo o ciclo de desenvolvimento de software, desde a conceção inicial até à sua implementação e aos testes finais. Um dos principais focos é garantir uma interface intuitiva e acessível para todos os futuros utilizadores. Com o desenvolvimento desta aplicação, esperamos proporcionar momentos significativos em família, realizados por todos para todos e, acima de tudo, contribuir para a inclusão social e educativa destas crianças.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2107_audiolivros_intercalar.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/WhatsApp_Image_2025-03-27_at_18.07.01.jpeg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 887,
+  "fields": {
+    "titulo": "Aplicação de controlo de assiduidade c/ terminal de picagem",
+    "descricao": "Aplicação web para efetuar o registo de assiduidade e submissão de documentos (justificação de falta, permuta de turno, atestados) + terminal físico para realização de picagem (\"pica-ponto\").",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_Aluno2108_GEu06bK.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/TFC_Aluno2108_W2fq16u.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 888,
+  "fields": {
+    "titulo": "Aplicação de técnicas de análise de dados para deteção de fugas e roturas em sistemas de distribuição de água",
+    "descricao": "A criação de zonas de medição e controlo em sistemas de distribuição de água é fundamental para uma gestão adequada e controlo de perdas de água. A monitorização de caudal é um passo essencial para deteção e controlo célere de perdas reais (fugas, roturas em condutas…). Este trabalho pretende explorar métodos estatísticos e de análise de dados para deteção e quantificação de fugas e roturas utilizando séries temporais de caudal medido reais. Trabalho coorientado pela Eng. Dália Loureiro (LNEC).",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2065.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Black-Color.jpg",
+    "rating": 4,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 889,
+  "fields": {
+    "titulo": "Aplicação móvel para rastreio da hepatite C",
+    "descricao": "Conceção e desenvolvimento de uma aplicação móvel em colaboração com a Associação Ares do Pinhal, uma instituição com vasta experiência no apoio a pessoas com dependências. A aplicação tem como objetivo melhorar a monitorização e a adesão ao tratamento da hepatite C, especialmente para utentes com historial de toxicodependência. Focada na recolha e gestão eficiente de dados, a solução proposta visa apoiar os profissionais de saúde na prestação de cuidados mais precisos e personalizados, ao mesmo tempo que se prepara para ser adaptável a outras patologias.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC__v1_yxdlD5j.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/icon_scaled.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 890,
+  "fields": {
+    "titulo": "Aplicação móvel para recomendação de carruagens de comboios e metros com base em informação de ocupação",
+    "descricao": "Este projeto consiste no desenvolvimento de uma aplicação relacionada com o sistema de comboios que recomenda ao utilizador uma carruagem do comboio com a menor percentagem de lotação de pessoas, promovendo uma distribuição mais equilibrada dos passageiros ao longo do comboio e com o objetivo de melhorar a experiência de mobilidade dos passageiros. Além disso, a aplicação sugere opções de comboios disponíveis com base na origem e no destino indicados pelo utilizador, permitindo um planeamento de viagem mais eficiente e personalizado.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_1%C2%AAentregaIntercalar_SusanaW.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/image.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 891,
+  "fields": {
+    "titulo": "Aplicação móvel para registo e acompanhamento de queixas de mobilidade urbana",
+    "descricao": "O QueixaAqui é uma aplicação móvel focada no registo e encaminhamento de queixas relacionadas com mobilidade e proteção do ambiente. A plataforma permite que os utilizadores denunciem problemas, anexem fotos e forneçam informações detalhadas sobre as ocorrências. A aplicação conta com uma funcionalidade de geolocalização, capturando automaticamente a morada da queixa, permitindo edição manual se necessário. Além disso, há uma dashboard web para a equipa da associação ZERO, onde as queixas são analisadas, categorizadas e acompanhadas através de estatísticas interativas e gráficos detalhados. Os principais tópicos da aplicação incluem: – Mobilidade (Transportes Públicos, Infraestruturas Rodoviárias e Ferroviárias, Mobilidade Ativa) – Proteção do Ambiente (como eixo complementar) A implementação técnica inclui um backend em Kotlin/Spring Boot e um frontend desenvolvido em Flutter para garantir compatibilidade com Android e iOS. O projeto também integra um sistema de envio e armazenamento de fotos, organizando-as em diretórios específicos no servidor. A proposta visa facilitar o contacto entre cidadãos e entidades responsáveis, promovendo transparência, participação cívica e melhorias urbanas.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/QueixaAquiRelat%C3%B3rioIntercalar.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Captura_de_ecr%C3%A3_2025-03-31_103307.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 892,
+  "fields": {
+    "titulo": "Aplicação para identificação de competências de diretores e alunos da Univ. Lusófona",
+    "descricao": "O docente Carlos Rouco juntamente com as mestrandas Paula Cipriano e Elisabete Cipriano propuseram ao Departamento de Recursos Humanos da Universidade o desenvolvimento de uma aplicaçãoweb no âmbito das teses demestrado que fizeram sobre as competências dos alunos e as competências de liderança nas áreas de chefia intermédia. Esta aplicação tem como principal objetivo auxiliar na recolha de respostas e a automatização da análise dessas competências. A aplicação será desenvolvida utilizando Kotlin e Spring, com uma base de dados em MySQL. O sistema utilizará a autenticação da Universidade Lusófona, diminuindo a dificuldade de implementação e garantindo a utilização reservada a utilizadores registados na Universidade. A solução baseia-se em três modos principais de utilização: • Modo de Aluno: permite o preenchimento de formulários com questões de escolha múltipla e a visualização do progresso nas avaliações feitas. • Modo de Colaborador (Chefias Intermédias): permite o preenchimento de formulários com respostas abertas onde as competências serão analisadas através de técnicas de Processamento de Linguagem Natural (NLP). • Modo de Recursos Humanos (RH): oferece funcionalidades para visualizar resultados médios, tanto de alunos como de colaboradores, e exportar os dados para investigações futuras. Com este projeto, pretende-se proporcionar uma ferramenta prática e eficiente para recolher e analisar os dados. A aplicação proporciona uma maneira prática de visualização do progresso dos alunos e colaboradores. Também abre as portas ao Departamento de Recursos Humanos para possíveis melhorias dentro da instituição e dos seus serviços.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_a21905215_Miguel_Melo_a22205897_Rodrigo_Dias.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Hello_World.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 893,
+  "fields": {
+    "titulo": "Aplicações móveis para reabilitação",
+    "descricao": "O Centro de Medicina de Reabilitação de Alcoitão é o mais importante centro de reabilitação da península ibérica. Este Trabalho de Fim de Curso (TFC) tem como objetivo dar continuidade ao desenvolvimento de 2 aplicações móveis: o Rehabilita (para treino de reabilitação motora) e o Rexiga (para treino de bexiga neurogénica). Ambas as aplicações estão desenvolvidas em Flutter, uma tecnologia que permite a criação de soluções multiplataforma para Android e iOS). Estas comunicam via Web Services com o servidor (Spring Boot/Kotlin). As aplicações apresentam dois perfis distintos, sendo que, dependendo das credenciais inseridas, os utilizadores são direcionados para o perfil que se adequa às suas necessidades e funções.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_-_Aplica%C3%A7%C3%B5es_m%C3%B3veis_para_reabilita%C3%A7%C3%A3o_-_Mariana_Livramento.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/IMG_9307.jpeg",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 894,
+  "fields": {
+    "titulo": "Auto Mecom Website ( Oficina de Reparação de Automóveis )",
+    "descricao": "Este trabalho final de curso tem como propósito a melhoria do website da oficina Auto Mecom, iniciado no ano anterior, de forma que seja possível otimizar a experiência do utilizador e expandir algumas funcionalidades necessárias para o bom funcionamento do website. Apesar do trabalho anterior ter iniciado a digitalização da oficina em questão, ainda existem algumas funcionalidades por implementar, funcionalidades essas que irão permitir que finalmente o website seja lançado de forma a poder ser utilizado.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_Empresa2001_Relatorio_Intrecalar_1semestre.docx",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/automecon.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 895,
+  "fields": {
+    "titulo": "Cibersegurança associada aos RPA",
+    "descricao": "A proposta do trabalho é utilizar a automação de processos (RPA) para detectar as ultimas vulnerabilidades dos sistemas organizacionais reportadas, obter os patch de segurança, submeter para atualização dos sistemas e adicionalmente efetuar a automação da detecção de Acessos Não Autorizados e consequente resposta a ameaças.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/Relatorio_Intercalar_Entrega_1_Final.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/img.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 896,
+  "fields": {
+    "titulo": "Classificação de Pacientes e Previsão de Tempos de Espera para Centro Hospitalar através de modelos Machine Learning",
+    "descricao": "Este trabalho é desenvolvido no âmbito da unidade curricular Trabalho Final de Curso (TFC) da Licenciatura de Ciência de Dados. A Engenheira Mariana Matos, Diretora da Unidade de Gestão de Doentes do Centro de Medicina de Reabilitação de Alcoitão (CMRA), Santa Casa da Misericórdia de Lisboa, entrou em contato com a Professora Iolanda Velho, propondo a cooperação científica na base deste TFC. O CMRA dedica-se à reabilitação de pessoas portadoras de deficiência de predomínio físico ou multideficiência congénita, de todas as idades. No ano de 2020 recebeu 665 utentes tratados em internamento, além de ter realizado 72 859 atos terapêuticos em ambulatório. Dada a amplitude do atendimento realizado pelo CMRA e a sua procura pela excelência em reabilitação, a instituição aposta no desenvolvimento tecnológico dos seus processos. Através da utilização de técnicas de Machine Learning para apoiar a gestão hospitalar, este projeto tem como objetivos: • realizar a análise de dados, cedidos pelo CMRA • desenvolver um modelo preditivo, que permita antecipar o tempo de espera de doentes que chegam ao CMRA, para internamento, ou ambulatório • no âmbito deste modelo preditivo, caracterizar o referido tempo de espera, em função da sua patologia, e área clínica do CMRA a que se refere.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2058.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/cmra.png",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 897,
+  "fields": {
+    "titulo": "Classificação do estado de funcionamento de uma eólica offshore recorrendo  a AI",
+    "descricao": "Nos últimos anos, a Europa aumentou significativamente os seus investimentos em en- ergias renováveis, impulsionada pela necessidade de reduzir a dependência de com- bustíveis fósseis, cumprir as metas climáticas e reforçar a resiliência energética. Com os mercados globais de energia a enfrentar volatilidade, fontes de energia renovável como a eólica e a solar desempenham um papel crucial na garantia de um futuro en- ergético sustentável e independente para o continente. Os parques eólicos offshore, em particular, tornaram-se um pilar da estratégia europeia para as energias renováveis, ofer- ecendo um enorme potencial devido aos vastos recursos de vento disponíveis ao longo das suas costas. Projetos como o WindFloat Atlantic, localizado ao largo da costa de Viana do Castelo, em Portugal, são exemplos desta transição, demonstrando a cres- cente importância da energia eólica offshore no mix energético europeu. Um aspeto crucial para maximizar a eficiência e a sustentabilidade destes projetos renováveis é garantir a operação fiável das turbinas eólicas offshore. Práticas eficientes de operação e manutenção (O&M) são essenciais para prevenir paragens das turbinas, reduzir custos operacionais e otimizar a produção de energia. Contudo, devido ao ambi- ente remoto e adverso onde estas instalações estão localizadas, monitorizar e prever o estado de funcionamento das turbinas apresenta desafios únicos. Este trabalho procura responder a esta necessidade, propondo uma abordagem ino- vadora para prever o estado operacional das três turbinas do cluster WindFloat Atlantic, utilizando dados de código aberto e imagens de satélite avançadas. Tirando partido dos dados de alta resolução fornecidos pelo SENTINEL-2, parte do programa europeu de observação terrestre Copernicus, juntamente com informações da European Network of Transmission System Operators for Electricity (ENTSO-E), o algoritmo desenvolvido per- mitirá previsões mais precisas do desempenho das turbinas. Este modelo tem como objetivo fornecer informações valiosas que possam melhorar as estratégias de O&M, assegurando a fiabilidade e eficiência a longo prazo destes ativos críticos de energia renovável. Ao utilizar estas fontes de dados de código aberto, esta investigação contribui para melhorar a sustentabilidade e a resiliência operacional da energia eólica offshore, apoiando os objetivos mais amplos da Europa de independência energética e responsabilidade am- biental.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC___Tiago_3.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/windfloat_1.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 898,
+  "fields": {
+    "titulo": "Comparação de Estratégias de Marketing Digital Baseadas em Redes Sociais para Pequenas e Médias Empresas (PMEs)",
+    "descricao": "Este trabalho analisa comparativamente as estratégias de marketing digital em redes sociais para Pequenas e Médias Empresas (PMEs), com foco nas ferramentas publicitárias Facebook Ads, Instagram Ads e TikTok Ads. Utilizando métricas como envolvimento, cliques, conversões e custo por lead, avalia-se a eficácia de cada plataforma em termos de custo-benefício e retorno sobre o investimento (ROI). A pesquisa combina a revisão de literatura com a análise de campanhas simuladas e reais, empregando ferramentas disponibilizadas pelas respetivas plataformas das redes socias e softwares de análise de dados para identificar como variáveis como orçamento e público-alvo influenciam os resultados. Os principais resultados destacam a importância de estratégias personalizadas e apontam recomendações práticas para que PMEs otimizem os seus recursos, maximizem resultados e escolham plataformas adequadas ao seu tipo de produto, público-alvo e orçamento. O estudo contribui para a compreensão académica e prática do impacto das redes sociais no desempenho de campanhas digitais.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/Aluno2129.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/SMM.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 899,
+  "fields": {
+    "titulo": "Configurador Software Aviónico  e gerador de código fonte",
+    "descricao": "Este projeto tem como referência um projeto do ano anterior, que se pretende dar continuidade. Assim como no ano passado o projeto mantém o objetivo de aprimorar a configuração de sistemas aviónicos espaciais, especificamente no contexto do Integrated Modular Avionic (IMA) e da arquitetura do software AIR desenvolvido pela empresa GMV. A solução atualmente proposta pretende dar continuidade, efetuado o desenvolvimento de uma Interface Gráfica Avançada (IGA) que redefine os padrões de eficiência, segurança e conformidade na configuração de sistemas espaciais. Pretende-se que o IGA seja intuitivo e centrado na usabilidade, proporcionando uma experiência eficaz mesmo para utilizadores com conhecimentos técnicos limitados. A principal funcionalidade da IGA é a geração automática de código-fonte com base nas configurações modeladas na interface. Isso não apenas otimiza o processo de configuração, mas também garante a precisão e a conformidade com as melhores práticas de programação.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2029_Configurador_Software_Avi%C3%B3nico_e_gerador_de_c%C3%B3digo.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/gmv.jpg",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 900,
+  "fields": {
+    "titulo": "Dashboard para Monitorização em Tempo Real da Produção e Consumo de Energia no Campus",
+    "descricao": "Desenvolver um dashboard que mostre a produção de energia pelos painéis fotovoltaicos e o consumo de energia no campus, fornecendo uma visão clara e prática do estado energético da instituição e indicadores de desempenho. O dashboard devia apresentar indicadores acumulados de contadores de energia, uma análise de desempenho (mal, bom, preciso de melhorar), histórico e tendências e poupanças financeiras estimados. O dashboard é para sensibilizar as pessoas no campus para a energia eficiente.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2118.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/imagemPythonAnywhere.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 901,
+  "fields": {
+    "titulo": "Desenvolvimento em plataforma LowCode",
+    "descricao": "Compreender BD e Plataformas lowcode Desenhar e criar BD relacional Desenhar e desenvolver aplicação em lowcode Conceitos como autenticação, autorização, acessibilidade, responsivo",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2008.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/low-code.jpg",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 902,
+  "fields": {
+    "titulo": "Design and Implementation of a 6G Testbed for Pilot Planning",
+    "descricao": "Establish a robust testing environment to evaluate and validate various 6G network technologies and use cases, ensuring that key features such as dynamic trust, continuous security monitoring, and intelligent edge computing are effectively integrated and assessed.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/itrust6GentregaIntercalar.docx",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logo.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 903,
+  "fields": {
+    "titulo": "Deteção de Microplásticos",
+    "descricao": "Neste trabalho final de curso, propõe-se o desenvolvimento de um modelo computacional para a deteção de microplásticos em amostras de água. A metodologia adotada assenta na implementação de algoritmos de processamento de imagem, concebidos para identificar e classificar automaticamente partículas de microplásticos.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_rik0Brg.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/PICA0374.jpg",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 904,
+  "fields": {
+    "titulo": "DigiDoc – app inteligente de gerenciamento de documentos",
+    "descricao": "DigiDoc é uma aplicação móvel desenvolvida pelo aluno licenciado em engenharia informática, Bruno Ramos, focada na gestão digital de documentos pessoais. O utilizador pode escolher um tipo de documento (como Cartão de Cidadão, Passaporte, etc.), digitalizá-lo através da câmara, e a app deteta automaticamente o documento na imagem, permitindo ajustar o recorte. Depois, realiza extração de texto (OCR) para facilitar a pesquisa por palavras-chave. A app ainda mapeia a data de validade dos documentos para enviar notificações. Também permite organizar documentos em dossiers associados a pessoas ou entidades, com proteção por código de acesso. Usa SQFLite como base de dados local.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2059_digidoc.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/icon.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 905,
+  "fields": {
+    "titulo": "Disentanglement in multiparty conversation",
+    "descricao": "When confronted with multiple people interacting with each other there exists a need to separate and identify multiple conversations to participate in them. As online interactions increase, the ability to do the same within complex digital environments becomes critical for ensuring clarity and effective communication and analysis of dialogue. We address this challenge by analyzing the current best practices used, attempting potential improvements and studying the use of machine learning techniques to enhance the accuracy and efficiency of conversation disentanglement.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI_Disentanglement.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/disentang.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 906,
+  "fields": {
+    "titulo": "Ferramenta de Anotação",
+    "descricao": "Ferramenta de anotação personalizada de dados. Em diversas áreas de machine learning, há a necessidade de anotar dados para que depois possam ser utilizados em modelos. A ferramenta deverá anotar dados de conversas online com o objetivo de resolver um problema em NLP denominada \"disentanglement\". Anotações como estas exigem vários anotadores, pelo que a ferramenta deve ser capaz de calcular o nível de concordância (agreement) entre eles.",
+    "link": "",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/download.jpeg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 907,
+  "fields": {
+    "titulo": "Gestão de distribuição alimentar v2",
+    "descricao": "Ferramenta de gestão alimentar",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/Relatorio_Intercalar_DEISI2042.docx",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/IMG_4272.jpeg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 908,
+  "fields": {
+    "titulo": "IMOinvestor: Inovação no Investimento Imobiliário (Back-end)",
+    "descricao": "Este Trabalho Final de Curso (TFC) centra-se no desenvolvimento de uma aplicação back end especializada para o setor imobiliário, direcionada às necessidades dos investidores. A proposta, desenvolvida em colaboração com a empresa IMOINVESTOR, procura colmatar uma lacuna significativa no mercado português, onde não existem soluções digitais adaptadas à análise e gestão de investimentos imobiliários. O sistema integra funcionalidades como o cálculo de retorno sobre o investimento (ROI), gestão de portfólios e propriedades, e acesso a dados fiscais e projeções de valorização. O desenvolvimento utiliza tecnologias robustas, como o Django REST Framework, garantindo escalabilidade, segurança e eficiência. A solução proposta visa centralizar informações cruciais e promover a democratização do acesso a ferramentas avançadas, contribuindo para decisões mais informadas no setor. A parceria com a IMOINVESTOR tem sido essencial para assegurar que a aplicação responde às necessidades reais do mercado, sendo validada com utilizadores reais. O projeto inclui ainda um plano rigoroso de testes para garantir a sua relevância e aplicabilidade. Este TFC tem como objetivo alcançar padrões de excelência, contribuindo para a transformação digital no mercado imobiliário em Portugal.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2044.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2044_LOGO.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 909,
+  "fields": {
+    "titulo": "IMOinvestor: Inovação no Investimento Imobiliário – (Front-end – App & Web)",
+    "descricao": "O ImoInvestor é uma plataforma digital inovadora desenvolvida para estabelecer um novo padrão para plataformas imobiliárias orientadas a investidores, no mercado português. Diferentemente das soluções tradicionais, que se concentram nos consumidores finais, o ImoInvestor foca-se em fornecer ferramentas avançadas e personalizadas para apoiar decisões estratégicas no setor imobiliário. Funcionalidades como filtros avançados para imóveis com elevado retorno sobre investimento (ROI), gráficos interativos de projeção financeira e relatórios personalizados distinguem esta aplicação, promovendo uma abordagem eficiente e orientada para dados. Este trabalho foca-se no desenvolvimento do front-end, responsável por criar uma interface intuitiva e funcional que simplifica a apresentação de informações complexas e otimiza a experiência do utilizador.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2043.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/download.jfif",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 910,
+  "fields": {
+    "titulo": "IMOinvestor: Inovação no Investimento Imobiliário – (Front-end – App & Web)",
+    "descricao": "IMOinvestor é uma plataforma digital projetada para transformar o modo como os investidores acessão e gerenciam oportunidades no mercado imobiliário. Este projeto visa desenvolver uma solução tecnológica que permita aos usuários explorar, analisar e investir em imóveis de maneira eficiente e informativa. Através de uma interface intuitiva, IMOinvestor proporcionará ferramentas de pesquisa avançada, detalhes completos dos imóveis, e um sistema de gestão de investimentos integrado.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1325.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logotipo-lusofona_1NBSKWp.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 911,
+  "fields": {
+    "titulo": "Identificação de arritmias via app",
+    "descricao": "O objetivo do trabalho é contribuir para a identificação precoce de arritmias através de um modelo de machine learning e integrar o mesmo numa aplicação móvel previamente desenvolvida capaz de fazer a leitura da frequência cardíaca através de uma técnica chamada Fotopletismografia, com o objetivo de prever eventos negativos.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI22202310_ARRITMIAS_APP.docx",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/ppg.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 912,
+  "fields": {
+    "titulo": "Interface Azure para ERP",
+    "descricao": "Pretende-se criar uma solução baseada em micro-serviços que permita a integração de ERP empresarial, em particular na componente de Gestão de Recursos Humanos (GRH), com plataforma Microsoft Azure de modo a gerir utilizadores desta de forma transparente a partir da relação laboral. O desenvolvimento será focado em Entra ID e MS365, mas poderá evoluir para funcionalidades mais avançadas",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2037.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Microsoft_Azure.svg.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 913,
+  "fields": {
+    "titulo": "Interface Azure para ERP",
+    "descricao": "Pretende-se criar uma solução baseada em micro-serviços que permita a integração de ERP empresarial, em particular na componente de Gestão de Recursos Humanos (GRH), com plataforma Microsoft Azure de modo a gerir utilizadores desta de forma transparente a partir da relação laboral. O desenvolvimento será focado em Entra ID e MS365, mas poderá evoluir para funcionalidades mais avançadas",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2037_taZ6YdA.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Arquitetura_da_Solucao.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 914,
+  "fields": {
+    "titulo": "IoT Lab2.0 – CGI – Indústria",
+    "descricao": "(Continuidade de TFC de 2023/24) \"IoT-Internet of Things Lab\" baseado em duas maquetes funcionais com o objetivo de materializar a Internet das Coisas em algo \"físico e real\". Demonstrando que o valor do conceito se materializa através de sinergias obtidas num ecossistema de tecnologias integradas e é maior que as partes separadamente. Desafio – Frontend (Operacional & Dashboarding) – Analítica e Machine Learning – Mobile com integração de realidade aumentada",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2018.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/deisi14-iot_industria_gsg7jJ5.png",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 915,
+  "fields": {
+    "titulo": "My Lessons : Gestão Inteligente de Escolas",
+    "descricao": "Acredito profundamente que o tempo é o nosso recurso mais valioso e limitado, e que o ensino é a forma mais eficaz de transformar positivamente o mundo. Para concretizar plenamente este potencial, desenvolvi a plataforma My Lessons, uma solução digital inovadora e integrada que utiliza Inteligência Artificial para automatizar tarefas administrativas rotineiras, libertando tempo para educadores, líderes escolares e famílias se focarem no que realmente importa. Com uma abordagem centrada na simplicidade, personalização e integração estratégica, o My Lessons oferece desde gestão financeira simplificada, organização eficiente de aulas e eventos, relatórios automáticos de progresso, até comunicação automatizada e integração com ferramentas essenciais, como calendários digitais, Stripe, Twilio, YouTube e Google, garantindo uma gestão superior e uma experiência educativa enriquecedora para todos os utilizadores.",
+    "link": "",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/app_icon.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 916,
+  "fields": {
+    "titulo": "NicePandora",
+    "descricao": "O Pandora é uma plataforma educacional inovadora que utiliza inteligência artificial para melhorar a avaliação e compreensão de código em ambientes de aprendizagem. Este sistema foi projetado para resolver problemas enfrentados por professores e alunos durante processos de avaliação em disciplinas de programação, proporcionando feedback detalhado, contextualizado e adaptado ao nível de competência do utilizador. A solução implementa funcionalidades avançadas, como a análise de código comparativa entre submissões de alunos e códigos de referência, exibição de mensagens de erros detalhadas, e relatórios de progresso para professores. Além disso, o Pandora oferece personalização no feedback, incluindo dicas ajustadas, validação estrutural de código e uma interface intuitiva que facilita a navegação e a usabilidade por parte de novos utilizadores. No desenvolvimento, priorizou-se uma abordagem modular e escalável, permitindo integração com ferramentas educacionais existentes e suporte a múltiplas linguagens de programação. Foram realizados testes em ambiente controlado para validar a eficácia das funcionalidades propostas, demonstrando resultados promissores na melhoria da aprendizagem e eficiência na correção de códigos. Com potencial para ser implementado em larga escala, o Pandora atende aos critérios de um produto viável mínimo, validando os conceitos propostos e destacando-se como uma solução prática e eficiente para desafios reais no ensino de programação. A plataforma está pronta para evoluir para ambientes de produção, demonstrando grande impacto.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2112_NicePandora.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Captura_de_ecr%C3%A3_2025-03-27_114213.png",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 917,
+  "fields": {
+    "titulo": "OP – Opening Doors",
+    "descricao": "O projeto consiste na criação de um sistema para controlo remoto de portas utilizando um servidor Flask e um Arduino Uno WiFi. O servidor Flask é responsável por gerir os utilizadores e as portas através de uma API REST, permitindo: – Registar utilizadores e armazenar credenciais encriptadas. – Criar e gerir portas associadas a cada utilizador. – Enviar comandos ao Arduino para abrir ou fechar portas. A comunicação entre o Flask e o Arduino é feita através da porta serial (USB). Quando um utilizador solicita a abertura de uma porta, o servidor envia um comando ao Arduino, que recebe a instrução e aciona um LED (ou uma fechadura, numa versão avançada). A base de dados SQLite armazena os utilizadores e as portas associadas. Cada porta tem um estado (\"aberta\" ou \"fechada\") e um canal de comunicação definido. O Arduino Uno WiFi está programado para: 1. Ler comandos recebidos pela porta serial. 2. Acionar o LED interno como indicador de estado. 3. Responder ao servidor Flask com mensagens de confirmação. Este projeto pode ser expandido para integrar fechaduras eletrónicas reais, autenticação de utilizadores e comunicação via WiFi em vez de USB.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2079.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/istockphoto-1276559838-612x612.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 918,
+  "fields": {
+    "titulo": "Plataforma MentHA Digital, Mental Health and Aging",
+    "descricao": "O Projeto MentHA (Mental Health and Aging) tem como objetivo desenvolver e otimizar uma aplicação Web destinada a melhorar o bem-estar e a qualidade de vida de adultos mais velhos com défice cognitivo, demência leve ou transtornos dissociativos de identidade, bem como apoiar os seus cuidadores formais e informais, promovendo a saúde mental na comunidade.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2106.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/MentHA_LNEDj6R.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 919,
+  "fields": {
+    "titulo": "Plataforma de Cibersegurança Inteligente",
+    "descricao": "Plataforma que recolhe toda a informação dos vários ativos de uma empresa (servidores, PCs, switches, routers, etc) para permitir ter toda a visão de cadastro, bem como analisar dados de rede interna e externa sobre uma empresa. Esta plataforma permite desta forma analisar vulnerabilidades e realizar análises inteligentes de prevenção a ataques.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2027.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2027.webp",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 920,
+  "fields": {
+    "titulo": "Plataforma de E-commerce Shopify",
+    "descricao": "O presente Trabalho Final de Curso (TFC) tem como objetivo demonstrar a construção de uma loja online, Infinity, através da utilização da plataforma Shopify. Pretende-se criar uma solução capaz de acompanhar o crescimento do mercado de e-commerce, bem como oferecer uma proposta inovadora que combina a personalização da loja, através da integração de novas tecnologias como a Inteligência Artificial, e a incorporação de redes sociais, para fortificar a relação com o cliente. O relatório demonstra uma análise detalhada do mercado de e-commerce comparando soluções existentes, como: Shopify, Woocommerce, VTEX, Salesforce Commerce Cloud e Adobe Commerce. Recorrendo aos dados obtidos nesta análise, identificam-se lacunas e oportunidades que justificam a relevância e pertinência do projeto. Para uma melhor abordagem do problema acima referido foram combinados diversos conceitos adquiridos ao longo da licenciatura, relacionados com o planeamento de projeto, desde a recolha e análise de requisitos até à realização de testes de validação.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2007_Plataforma_e-commerce_Shopify.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/shopify.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 921,
+  "fields": {
+    "titulo": "Plataforma de Low-Code",
+    "descricao": "OBJETIVO: desenvolvimento de aplicações baseadas em plataforma lowcode. modelação de dados, desenho de fluxos aplicacionais, SQL e de rotinas plsql, javascript, workspaces. PLANO RESUMO: Compreender BD e Plataformas lowcode Desenhar e criar BD relacional Desenhar e desenvolver aplicação em lowcode Conceitos como autenticação, autorização, acessibilidade, responsivo",
+    "link": "",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/low-code_eq2poc9.jpg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 922,
+  "fields": {
+    "titulo": "Plataforma de Monitorização de Albufeiras",
+    "descricao": "A proposta de projeto WATER-WISE (Plataforma Geoespacial para Gestão Inteligente da Água), que neste momento se encontra em avaliação, tem como objetivo dar resposta às necessidades de gestores de recursos hídricos, agricultores e investigadores, através de soluções e ferramentas capazes de gerir os recursos hídricos e as práticas agrícolas. O foco principal deste projeto é desenvolver uma aplicação web, com a função de integrar e processar dados provenientes de diversas fontes e posteriormente apresentá-los de uma forma visual e dinâmica, para apoiar estas mesmas necessidades. Esta aplicação irá recolher e processar dados provenientes de outros grupos do projeto, como: medições no terreno, dados de telemetria, análises de modelos preditivos, projeções climáticas e previsões meteorológicas. Esses modelos permitem simular cenários como balanços hídricos, dinâmicas de bacias hidrográficas e condições dos reservatórios, oferecendo informações que ajudam a prever necessidades futuras e a identificar potenciais riscos. A integração destes criará uma aplicação capaz de proporcionar aos utilizadores uma visão clara e detalhada da situação atual e da disponibilidade dos recursos hídricos. Sobre as funcionalidades principais que vão estar disponíveis na aplicação, a mesma contará com: visualização de dados através de dashboards, gráficos, mapas e séries temporais interativos, possibilitando que os utilizadores façam a sua análise da forma que pretenderem. Terá também sistemas de alerta através de ML, com o objetivo de notificar os utilizadores sobre condições específicas, como situações de seca agrícola ou níveis baixos de água. Estas funcionalidades facilitam a gestão dos recursos disponíveis. Com uma interface intuitiva e fácil de usar, a aplicação estará disponível em português, inglês e espanhol, garantindo que os parceiros do projeto Europeu possam utilizar a mesma sem qualquer problema. Garantir essa acessibilidade e disponibilidade é bastante importante, pois reflete o compromisso deste projeto com a disponibilização fácil da informação e das soluções. O projeto Water-Wise será realizado com o intuito de promover e adaptar a utilização deste tipo de ferramentas, sendo assim, uma solução flexível e inovadora que ajudará tanto os agricultores como todos os utilizadores que necessitarem da informação tratada e disponibilizada pelo mesmo, promovendo uma melhor tomada de decisão face às mudanças climáticas previstas.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2105_WATER-Wise_entrega1.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/web-app-manifest-512x512_hmnb8Wh.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 923,
+  "fields": {
+    "titulo": "Plataforma e-commerce Shopify",
+    "descricao": "Pretende-se desenvolver um conjunto alargado de plataformas de e-commerce B2C e B2B com integrações com redes sociais, Google ads, plataformas de pagamentos entre outros.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1295.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/imagem_5bCFc9Y.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 924,
+  "fields": {
+    "titulo": "Power Platform Digital Transformation",
+    "descricao": "O projeto centra-se na modernização dos sistemas de radiocomunicações de uma entidade, através da implementação de um novo portal baseado em tecnologias da Microsoft e Power Platform. Esta solução visa substituir soluções já existentes, e promover a digitalização de processos, explorando tendências tecnológicas emergentes por intermédio de ferramentas Low-Code. A nova plataforma está a ser concebida com um design moderno e compatível com os sistemas existentes, enquanto a mesma trabalha na organização unificada das funcionalidades que guiarão a estrutura do portal. A plataforma representa uma abordagem inovadora ao desenvolvimento de soluções digitais, democratizando o acesso à criação de aplicações através de ferramentas Low-Code. Estas funcionalidades permitem acelerar o desenvolvimento, oferecer personalização e aumentar a eficiência dos processos. A plataforma foi testada e validada em ambiente de produção, demonstrando vantagens significativas, especialmente para pequenas e médias empresas, ao reduzir custos e superar barreiras no acesso a tecnologias avançadas. Os resultados obtidos evidenciam o potencial transformador das plataformas Low-Code no contexto organizacional, destacando o seu contributo para a digitalização, a eficiência e a inovação tecnológica. O projeto não só procura a criação de soluções escaláveis e adaptáveis, como também reforçou o papel estratégico destas tecnologias na modernização empresarial e institucional. Esta abordagem revela-se de elevado valor para o mercado, ao abrir novas possibilidades para o desenvolvimento tecnológico de organizações com diferentes dimensões e necessidades.",
+    "link": "",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Captura_de_ecr%C3%A3_2025-04-13_184533.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 925,
+  "fields": {
+    "titulo": "Rede Social para a Comunidade Universitaria",
+    "descricao": "Este TFC consiste em desenvolver uma WebApp e uma aplicação móvel que permitam aos estudantes universitários expor e partilhar os seus trabalhos/atividades da vida académica, criar e personalizar os seus portfólios/perfis, com a possibilidade de integrar um marketplace para venda dos trabalhos ou merchandising.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_G2131_ON-CREATION.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/imagem_2025-03-28_214156582.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 926,
+  "fields": {
+    "titulo": "Segmentação de incêndios florestais",
+    "descricao": "Os incêndios florestais constituem um dos desastres naturais mais devastadores, causando impactos ambientais, sociais e económicos significativos. Estes eventos ameaçam ecossistemas inteiros, comprometem a biodiversidade, colocam vidas humanas e animais em risco e contribuem para o agravamento das alterações climáticas devido à emissão de gases com efeito de estufa. Assim, a deteção precoce e eficiente de incêndios é essencial para mitigar os seus danos e permitir intervenções rápidas e eficazes. O desenvolvimento de incêndios florestais ocorre em duas fases principais: a emissão de fumo, que é o primeiro indicador visível do início de uma combustão, e, posteriormente, o aparecimento de chamas, que marcam um estado mais avançado e perigoso do fogo. A deteção de fumo é particularmente desafiante devido à sua natureza translúcida e à dispersão em condições ambientais adversas, como ventos ou luminosidade variável. Por outro lado, o fogo é mais fácil de identificar, mas quando visível, normalmente já representa uma situação crítica. Assim, um sistema de deteção eficaz deve ser capaz de identificar tanto o fumo quanto o fogo para facilitar uma intervenção atempada. Esta trabalho propõe o desenvolvimento de um sistema avançado baseado em deep learning para a segmentação simultânea de fumo e fogo em imagens. Serão exploradas duas arquiteturas reconhecidas pela sua eficiência em tarefas de segmentação, a U-Net e a ResUNet, ambas capazes de realizar classificações pixel-a-pixel em cenários complexos. Os modelos serão treinados e avaliados utilizando dois conjuntos de dados: o Corsican, um dataset público, e o Gestosa, um dataset privado, ambos contendo imagens captadas por drones e sensores térmicos. O estudo também investigará a melhoria dessas arquiteturas por meio da otimização das funções de perda para aumentar a sua precisão e robustez, especialmente em condições ambientais desafiadoras. A otimização das arquiteturas visa melhorar a deteção de padrões complexos, como os contornos irregulares de fumo e fogo, e garantir uma maior eficácia em diferentes cenários. Espera-se que os resultados desta trabalho demonstrem a viabilidade e a eficácia de sistemas baseados em deep learning para a deteção precoce de incêndios florestais. Esta abordagem representa um avanço significativo ao combinar a identificação de fumo e fogo numa única solução, com potencial para transformar as estratégias de monitorização, resposta a emergências e preservação ambiental.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2057.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/mask.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 927,
+  "fields": {
+    "titulo": "Sistema Integrado de Gestão de Stocks",
+    "descricao": "Este trabalho analisa o fluxo operacional e os desafios de gestão de stock de uma empresa localizada no MARL, dedicada à distribuição de frutas, hortícolas e legumes. Foram identificados problemas relacionados com a gestão manual de tabelas de stock em Excel, resultando em potenciais erros na contagem e na faturação. Como método, foi realizado um levantamento detalhado do funcionamento das operações da empresa, incluindo armazenamento, processamento em fábrica e vendas, bem como das entradas e saídas registadas nos sistemas de controlo. As principais conclusões incluem a necessidade de automatizar processos para reduzir erros, melhorar a rastreabilidade e otimizar os tempos de resposta, garantindo maior eficiência na operação e na satisfação dos clientes.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISI2425_Sistema_Integrado_de_Sistemas_de_Stocks.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Imagem.jpeg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 928,
+  "fields": {
+    "titulo": "Utilização de Inteligência Artificial no combate aos comportamentos aditivos e dependências",
+    "descricao": "Em estreita colaboração com a Associação Ares do Pinhal (AdP), uma IPSS que tem como missão promover a inclusão social de pessoas com comportamentos aditivos e dependências centrada numa abordagem de redução de riscos e danos, neste trabalho pretende-se aplicar a inteligência artificial para analisar a grande quantidade de dados que a AdP é detentora, de modo a encontrar tendências e produzir insights relevantes no combate à toxicodependência e consequentes danos associados ao consumo.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI2113.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Ares_do_Pinal_Logo.png",
+    "rating": 4,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 929,
+  "fields": {
+    "titulo": "i-Inflation",
+    "descricao": "A inflação é um indicador económico crítico que afeta indivíduos, empresas e governos igualmente. Apesar da sua importância, muitas pessoas não têm uma compreensão clara de como a inflação é calculada e os fatores que contribuem para a mesma. O ob- jetivo deste projeto, i-Inflation, é desenvolver uma aplicação móvel e uma aplicação web que permita aos usuários colaborar e calcular com eficiência a inflação. A plataforma fornecerá ferramentas para diversas partes interessadas, detentores, incluindo economis- tas, decisores políticos e o público em geral, para se envolverem com dados de tempo real, de modo a melhorar a precisão dos cálculos de inflação e obter uma compreensão mais profunda das tendências económicas. O projeto consistirá em desenvolvimento frontend e backend, com ênfase em interfaces fáceis de usar, visualização de dados e colaboração em tempo real. Em última análise, o i-Inflation procura democratizar a análise económica, tornando os dados de inflação mais acessíveis e compreensíveis para um público mais amplo.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC__Final.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/inflacao-800.jpg",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 930,
+  "fields": {
+    "titulo": "iEquus",
+    "descricao": "Este TFC, surge em parceria com a Faculdade de Medicina Veterinária da Universidade Lusófona e pretende desenvolver uma aplicação móvel para saber o estado de saúde do cavalo. A aplicação está desenvolvida para Android e iOS e é ser capaz de capturar e guardar imagens, fazer o seu processamento e devolver ao utilizador o Body Score associado ao equí­deo, bem como uma estimativa do peso.",
+    "link": "",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/iEquus.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 931,
+  "fields": {
+    "titulo": "A GPT-Based Data Augmentation Approach for enhancing Argumentation Mining in Multi-party Dialogues",
+    "descricao": "This Undergraduate Thesis proposes developing a pipeline for using GPT technology to mine arguments in online chat texts. The central point lies in the design and implementation of a system that takes advantage of GPT’s advanced capabilities to identify and analyze arguments present in virtual, multi-party dialogues. The methodology ranges from data collection and preparation to efficient integration with the GPT model, providing valuable insights into the structure and dynamics of the arguments present in these online interactions. This work aims to contribute significantly to the advancement of research around argument mining by analyzing the potential of GPT technology as an effective tool in this context.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI89_Luiza_Coelho.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/DEISI89.jpeg",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 932,
+  "fields": {
+    "titulo": "AWS Resource Management: A Private Collaborative Management Portal",
+    "descricao": "A cloud revolucionou a tecnologia moderna, permitindo que empresas construam negócios com uma infraestrutura que suporta diversas necessidades e possibilita distribuição em massa. A cloud é um conjunto de serviços oferecidos pela internet, como computação e armazenamento, que facilita a gestão de recursos e reduz custos. Neste ramo, a Amazon Web Services (AWS) domina o mercado, oferecendo uma ampla gama de serviços, incluindo computação, armazenamento e serviços avançados de Machine Learning, a custos reduzidos. Contudo, a AWS é complexa e pouco user-friendly. Este TFC propõe uma solução centralizada para simplificar a gestão dos serviços da AWS através de um portal colaborativo.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI25___Relat%C3%B3rio_TFC.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/login_page.png",
+    "rating": 5,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 933,
+  "fields": {
+    "titulo": "Adventour",
+    "descricao": "A Adventour é uma aplicação projetada para simplificar e enriquecer a experiência de turismo de aventura. Usará uma interface intuitiva, para oferecendo itinerários detalhados, dicas e recomendações p",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1307.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logotipo-lusofona_6TwSXqI.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 934,
+  "fields": {
+    "titulo": "Analysis of Joint Purchasing Patterns for Recommendation Systems in an Online Bookstore",
+    "descricao": "This study analyses joint purchasing patterns to enhance e-commerce recommender systems. Using a 2006 Amazon dataset with over 500,000 products, the research explores product interactions and network analysis techniques. By leveraging Python and Gephi, a network graph is created to demonstrate the existing relations between products. The findings aim to improve recommendation algorithms, offering insights for small enterprises to better meet customer preferences.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_-_Joana_Okica_-_ultima_entrega.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Screenshot_2024-06-29_084104.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 935,
+  "fields": {
+    "titulo": "Análise de dados de caudal para apoio na tomada de decisão em sistemas de distribuição de água",
+    "descricao": "Este trabalho é realizado em colaboração com o Laboratório Nacional de Engenharia Civil (LNEC) e recorrendo a dados anónimos de caudal obtidos em sistemas reais. Estes dados serão analisados através de métodos implementados em Python e de algumas ferramentas já desenvolvidas em R. Neste trabalho, serão aplicados conhecimentos e competências adquiridos nas unidades curriculares (UC) de Data Science e Probabilidades e Estatística. Ao longo deste trabalho, iremos aplicar a metodologia proposta a séries temporais de caudal de sistemas de distribuição de água, tentando obter uma série sem falhas, com passo de tempo pré-definido e normalizado entre medições. No final, pretendemos avaliar a qualidade dos dados, propondo indicadores que meçam essa qualidade",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC-21904209.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Normaliza%C3%A7%C3%A3o_2.png",
+    "rating": 4,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 936,
+  "fields": {
+    "titulo": "Análise de padrões de compra conjunta para sistemas de recomendação numa online gift store",
+    "descricao": "A recomendação de produtos desempenha um papel vital no panorama do comércio eletrónico atual. À medida que as lojas online continuam a crescer, este aspeto torna-se um dos principais impulsionadores do sucesso e da competitividade no mercado. No entanto, muitos sistemas de recomendação tradicionais enfrentam desafios em termos de precisão e relevância das recomendações oferecidas. Portanto, aprimorar a precisão das recomendações tornou-se um objetivo fundamental. O nosso objetivo foi a aplicação de análise de redes sociais com intuito de beneficiar os sistemas de recomendações numa gift store.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_xeKasFM.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/shares2_8sbgguv.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 937,
+  "fields": {
+    "titulo": "Análise de reviews em plataformas de e-commerce",
+    "descricao": "Este trabalho explora a análise de avaliações em plataformas de e-commerce através de técnicas de aprendizagem automática não supervisionada, com o objetivo de carac\u0002terizar comportamentos de utilizadores que possam auxiliar na deteção de avaliações falsas. Com base num conjunto de dados extraído de uma plataforma de e-commerce, foram analisadas características textuais, temporais e comportamentais das avaliações. Aplicaram-se os algoritmos K-Means e Isolation Forest para segmentar perfis de utili\u0002zadores e identificar padrões de comportamento. Observaram-se diferenças relevantes entre tipos de avaliações, o que poderá contribuir para a identificação de práticas fraudu\u0002lentas. A abordagem proposta visa reforçar os mecanismos automáticos de moderação, promovendo maior confiança nas plataformas digitais",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1287.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Screenshot_3-12-2025_11592_9a7c144fdc74.ngrok-free.app.jpeg",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 938,
+  "fields": {
+    "titulo": "Aplicar Inteligência Artificial ao movimento da bolsa",
+    "descricao": "A previsão de preços de criptomoedas é uma das áreas mais complexas e em rápida evolução no campo da modelagem de séries temporais. A extrema volatilidade dos mer\u0002cados de criptomoedas, juntamente com a sua dependência de múltiplos fatores influen\u0002tes tais como dados históricos, sentimento de mercado, volume de negociação e eventos externos (por exemplo, decisões regulatórias ou avanços tecnológicos) onde se cria um ambiente de modelagem preditiva particularmente desafiador. Ao longo dos anos, os investigadores têm utilizado uma vasta gama de abordagens para enfrentar este problema. Métodos estatísticos tradicionais, como o ARIMA, forne\u0002cem uma base sólida para modelar padrões lineares, mas muitas vezes falham ao lidar com as complexidades não lineares típicas dos dados de criptomoedas. Por outro lado, técnicas de deep learning, como LSTM (Long Short Term Memories), GRU e Transfor\u0002mers, demonstraram melhorias significativas na captura desses padrões complexos e na adaptação às rápidas mudanças do mercado. Além disso, modelos híbridos e a inte\u0002gração de fontes de dados alternativas como a análise de sentimento a partir de redes sociais ou tendências de pesquisa em motores de busca têm surgido como métodos de ponta para melhorar a precisão das previsões",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1288.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/imagem_EMfEvRU.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 939,
+  "fields": {
+    "titulo": "Aplicativo de gerenciamento e extração de dados de documentos para preenchimento automático de formulários",
+    "descricao": "O projeto consiste no desenvolvimento de um aplicativo Android inovador para digitalização e gerenciamento de documentos pessoais, com funcionalidades avançadas de preenchimento automático de formulários. O aplicativo oferece os seguintes recursos principais: – Digitalização e Processamento de Documentos: – Armazenamento e Extração de Dados – Preenchimento Automático de Formulários – Revisão e Correção de Dados: – Conversão e Envio de Documentos:",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1313.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/Digigoc.jpeg",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 940,
+  "fields": {
+    "titulo": "Aplicação Web MentHA Digital",
+    "descricao": "Pretende-se desenvolver e melhorar uma aplicação Web para cuidadores informais do protocolo MentHA (Mental Health and Aging) de avaliação neuropsicológica de pessoas mais velhas com défice cognitivo, demência leve ou transtornos dissociativos de identidade. Esta aplicação é constituída por três aplicações diferentes, MentHA COG, Protocolo MentHA e por último, o MentHA CARE. Este TFC, vai-se focar essencialmente na melhoria das três aplicações, de modo a um constante levantamento de requisitos e à medida que utilizam a aplicação recebe-se feedback e posteriormente procede-se à melhoria das aplicações. Muitas sessões com instituições parceiras do projeto vão ser importantes para a melhoria de certas aplicações e é dada a devida prioridade aos requisitos consoante os pedidos feitos pelas mesmas. O MentHA CARE é uma aplicação web de suporte aos cuidadores informais de pessoas com e sem doença mental prévia que apresentam algum comprometimento neuropsicológico e/ou demência. Esta aplicação, enquanto intervenção psicoeducativa, combina duas componentes de suporte educativo e de suporte emocional, resultante de uma aprendizagem de estratégias, que têm como o principal objetivo o desenvolvimento de conhecimentos e competências para lidar com quadros clínicos específicos e diminuir os níveis de stress, ansiedade ou depressão do cuidador.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI71_RELATORIO_FINAL.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/mentha.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 941,
+  "fields": {
+    "titulo": "Aplicação Web para Creche, jardim de infância",
+    "descricao": "A visão deste projeto é orientada para a inovação, fundamentada na sólida base tecnológica da framework .NET e na arquitetura MVC, integrando estrategicamente o Azure da Microsoft. A escolha do Azure destaca-se pelos benefícios em integração com o MVC, facilidade de uso e implementação eficaz de bases de dados, alinhando-se perfeitamente com o Visual Studio 2022. Essa combinação permite a criação de uma solução dinâmica, escalável e eficiente, fortalecendo a capacidade de adaptação contínua às necessidades do negócio em evolução, ao mesmo tempo em que demonstra um compromisso claro com a inovação e a excelência técnica.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC_DEISIG75_AplicacaoWebparaCrecheJardimdeinfancia.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logo_academia.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 942,
+  "fields": {
+    "titulo": "Aplicação Web para gestão de um ginásio",
+    "descricao": "O projeto consiste em desenvolver uma aplicação web para a gestão do ginásio PT CLINIC, visando substituir ferramentas tradicionais como Excel e Word. A aplicação foi concebida para centralizar a gestão do ginásio, melhorando a eficiência operacional e a experiência dos utilizadores. O desenvolvimento abrangeu desde a identificação do problema até a implementação e testes. A aplicação é dividida em duas interfaces: uma para o utilizador final e outra para a administração (BackOffice). A transformação digital pretendida simplifica o agendamento de aulas, facilita o acesso a informações importantes e melhora a comunicação entre a equipa do ginásio e os clientes. A análise de viabilidade foi realizada através de inquéritos com profissionais, gestores e clientes, confirmando a necessidade da solução. A arquitetura de software utiliza o framework Django, com MySQL, HTML, CSS, JavaScript e Git, garantindo uma solução robusta e eficaz.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/APLICA%C3%87%C3%83O_WEB_PARA_GEST%C3%83O_DE_UM_GIN%C3%81SIO_.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/PtClinic.jpeg",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 943,
+  "fields": {
+    "titulo": "Aplicação de controlo de assiduidade c/ terminal de picagem",
+    "descricao": "Criação de uma solução de raíz para o controlo de assiduidade, para substituir o processo atual. Contempla o desenvolvimento de um terminal para a picagem de entrada/saída e aplicação web para acesso dos vários intervenientes (RH, chefias: para gestão; funcionários: para consulta), suportada por base de dados.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1333.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logotipo-geral-horizontal-preto-png_8Gyn13Y.png",
+    "rating": 3,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 944,
+  "fields": {
+    "titulo": "Aplicação movel para criação e audição de audio-livros infantis",
+    "descricao": "A pedido da Associação Nacional De Glaucoma Pediátrico, pretende-se criar uma aplicação movel para gravar e disponibilizar audiolivros. Será uma aplicação comunitária, onde pais ou familiares de crianças invisuais gravam audiolivros que são disponibilizados numa biblioteca, disponivel através da mesma aplicação, e para ser usada pela mesma comunidade.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1335.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logotipo-geral-vertical-cores-png-2_kXLJR9V.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 945,
+  "fields": {
+    "titulo": "Aplicação móvel + Rest API de / para análise estatística e produção de resultados",
+    "descricao": "A versão móvel da aplicação web já existente fbtts.pt, criado e gerido pelo professor Duarte Neves, é uma plataforma de criação e validação de estratégias de apostas desportivas de futebol. A aplicação móvel permite ao utilizador consultar as suas estratégias, jogos e ligas das mesmas num dispositivo móvel.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI52_-_Relatorio_Final.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/fbtts.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 946,
+  "fields": {
+    "titulo": "Aplicação móvel para rastreio de Hepatite C",
+    "descricao": "A Associação Ares do Pinhal (AdP) é uma IPSS que tem como missão a intervenção junto de populações em situação de exclusão social. Pretende-se desenvolver uma aplicação móvel em Flutter que permita registar informação específica relacionada com o processo de rastreio, monitorização e tratamento da Hepatite C nos utentes desta associação. Comunicará via webservices REST com o servidor que integrará com o sistema atual da AdP.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/TFC-Relat%C3%B3rio-Final-SofiaCaldas-Deisi10.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logo-aresdo-pinhal-250_black.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 947,
+  "fields": {
+    "titulo": "Aplicação móvel para rastreio de Hepatite C",
+    "descricao": "A Associação Ares do Pinhal (AdP) é uma IPSS que tem como missão a intervenção junto de populações em situação de exclusão social. Pretende-se desenvolver uma aplicação móvel em Flutter que permita registar informação específica relacionada com o processo de rastreio, monitorização e tratamento da Hepatite C nos utentes desta associação. Comunicará via webservices REST com o servidor que integrará com o sistema atual da AdP. Este trabalho já está atribuído.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1301.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logotipo-lusofona_42EtsyV.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 948,
+  "fields": {
+    "titulo": "Aplicação móvel para registo e acompanhamento de queixas de mobilidade urbana",
+    "descricao": "A associação ZERO é uma das mais importantes associações portuguesas na área da sustentabilidade e mobilidade. A ZERO pretende desenvolver uma aplicação móvel (Android e iOS) que permita que os cidadãos registem e acompanhem queixas de mobilidade urbana (transportes, ciclovias, pedonal, etc..). Este trabalho será desenvolvido em Dart/Flutter e comunicará com um backend desenvolvido em Kotlin/Spring Boot. Este trabalho já está atribuído.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/1290.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/logotipo-geral-vertical-cores-png.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 949,
+  "fields": {
+    "titulo": "Aplicação móvel para treino de bexiga",
+    "descricao": "Uma aplicação móvel desenvolvida em Flutter, que visa ajudar pacientes do Centro de Medicina de Reabilitação de Alcoitão que sofrem com condição de bexiga neurogénica tirando partido da telemedicina.",
+    "link": "https://teses.deisi.ulusofona.pt/media/teses/DEISI8_Relat%C3%B3rio_Final.pdf",
+    "ano": 2025,
+    "imagem": "https://teses.deisi.ulusofona.pt/media/teses/bexiga.png",
+    "rating": 2,
+    "tecnologias": []
+  }
+},
+{
+  "model": "portfolio.tfc",
+  "pk": 950,
+  "fields": {
+    "titulo": "Aplicação para identificação de competências de diretores e alunos da Univ. Lusófona",
+    "descricao": 
