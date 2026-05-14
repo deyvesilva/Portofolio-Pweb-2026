@@ -1,7 +1,7 @@
 from django.urls import include, path
 from . import views
 
-
+app_name = 'portfolio'
 
 urlpatterns = [
     path('', views.home_view, name='home'),
@@ -13,7 +13,7 @@ urlpatterns = [
     path('tfc/', views.tfc_view, name='tfc'),
     
     # IMPORTANTE: Descomentei o dashboard para o botão de gestão funcionar
-    path('dashboard/', views.dashboard_view, name='dashboard'), 
+    path('dashboard/', views.dashboard_view, name='dashboard'),
     
     path('sobre/', views.sobre_view, name='sobre'),
     

@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'artigos' # Define o namespace que o teu base.html procura
+app_name = 'artigos' 
 
 urlpatterns = [
     path('', views.lista_artigos, name='lista'),

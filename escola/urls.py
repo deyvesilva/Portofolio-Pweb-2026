@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+app_name = 'escola'  
+
 urlpatterns = [
     # Rota para a página de cursos
     path('cursos/', views.cursos_view, name="cursos"),

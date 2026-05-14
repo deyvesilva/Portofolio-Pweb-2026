@@ -31,10 +31,10 @@ urlpatterns = [
     path('', include('portfolio.urls')),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
-    path("escola/", include("escola.urls")),       #     <- rota para aplicação web escola
-    path('portfolio/', include('portfolio.urls')), # Incluir a app de portfólio
-    path('dashboard/', portfolio_views.dashboard_view, name='dashboard'),
+    path("escola/", include("escola.urls")),    
+    path('dashboard/', portfolio_views.dashboard_view, name='portfolio:dashboard'),
+    path('artigos/', include('artigos.urls')),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#if settings.DEBUG:
+ #   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

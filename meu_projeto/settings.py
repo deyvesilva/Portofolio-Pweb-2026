@@ -12,17 +12,23 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 import os
 from pathlib import Path
+import environ
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# já foi feita a importação para as var. de ambiente da BD
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5hg8r@#teta@u&kk^%u*e^hel(6lm$7bua6&3n%6n762bldt&7"
-
+SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,7 +43,9 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    'cloudinary_storage',
     "django.contrib.staticfiles",
+    'cloudinary',
 
     "portfolio",
     "escola",
@@ -47,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -55,8 +64,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_URL = '/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 ROOT_URLCONF = "meu_projeto.urls"
 
 TEMPLATES = [
@@ -80,13 +89,49 @@ WSGI_APPLICATION = "meu_projeto.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
+
+#DATABASES = {
+   # "default": {
+    #    "ENGINE": "django.db.backends.sqlite3",
+     #    "NAME": BASE_DIR / "db.sqlite3",
+     #}
+#}
+
+#DATABASES = {
+ #  "default": env.db("DATABASE_URL")
+#}
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': env('CLOUDINARY_API_KEY'),
+    'API_SECRET': env('CLOUDINARY_API_SECRET'),
+}
+
+# Atualização do dicionário STORAGES
+
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+       # Usaei o backend padrão do WhiteNoise sem compressão "on-the-fly"
+        # Isso resolve 100% dos erros de FileNotFoundError no Windows
+        "BACKEND":"whitenoise.storage.StaticFilesStorage",
+    },
+}
+# 1. Adicionei esta linha para o WhiteNoise não crashar se não encontrar um ficheiro
+WHITENOISE_MANIFEST_STRICT = False
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -131,8 +176,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # --- CONFIGURAÇÕES DE AUTENTICAÇÃO ADICIONADAS ---
 
 LOGIN_URL = 'accounts:login'
-LOGIN_REDIRECT_URL = 'dashboard'
-LOGOUT_REDIRECT_URL = 'home' # Após sair, volta para a página inicial pública
+LOGIN_REDIRECT_URL = 'portfolio:dashboard'
+LOGOUT_REDIRECT_URL = 'portfolio:home'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -140,5 +185,13 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'deyvedasilva12@gmail.com'
-EMAIL_HOST_PASSWORD = 'rucz mrnd okvv zbgj' # Gerada na conta Google
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')  
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+
+
+# Podes manter estas, mas o Cloudinary agora manda no "default"
+#MEDIA_URL = '/media/'
+# MEDIA_ROOT já não será usado para guardar novos ficheiros, mas podes mantê-lo por agora
+

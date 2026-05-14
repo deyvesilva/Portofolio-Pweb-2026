@@ -12,14 +12,14 @@
             <h3>👤 Perfil</h3>
             {% if perfil %}
                 <p><strong>{{ perfil.nome }}</strong></p>
-                <a href="{% url 'perfil_editar' perfil.id %}" style="display: inline-block; background: #2d3748; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">✏️ Editar Perfil</a>
+                <a href="{% url 'portfolio:perfil_editar' perfil.id %}  " style="display: inline-block; background: #2d3748; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">✏️ Editar Perfil</a>
             {% endif %}
         </div>
         <div style="background: white; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
             <h3>🎓 Licenciatura</h3>
             {% if licenciatura %}
                 <p><strong>{{ licenciatura.nome }}</strong></p>
-                <a href="{% url 'licenciatura_editar' licenciatura.id %}" style="display: inline-block; background: #2d3748; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">✏️ Editar Curso</a>
+                <a href="{% url 'portfolio:licenciatura_editar' licenciatura.id %}" style="display: inline-block; background: #2d3748; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">✏️ Editar Curso</a>
             {% endif %}
         </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="dash-header" style="background-color: #ce3131;">
             <h3 style="margin: 0;">🏆 Competências</h3>
             {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                <a href="{% url 'competencia_nova' %}" class="btn-add-small">+ Adicionar</a>
+                <a href="{% url 'portfolio:competencia_nova' %}" class="btn-add-small">+ Adicionar</a>
             {% endif %}
         </div>
         <table class="dash-table">
@@ -39,8 +39,8 @@
                 <td>{{ item.nome }}</td>
                 <td style="text-align: right;">
                     {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                        <a href="{% url 'competencia_editar' item.id %}" class="link-edit">Editar</a>
-                        <a href="{% url 'competencia_eliminar' item.id %}" class="link-del">Eliminar</a>
+                        <a href="{% url 'portfolio:competencia_editar' item.id %}" class="link-edit">Editar</a>
+                        <a href="{% url 'portfolio:competencia_eliminar' item.id %}" class="link-del">Eliminar</a>
                     {% endif %}
                 </td>
             </tr>
@@ -55,7 +55,7 @@
         <div class="dash-header" style="background-color: #3182ce;">
             <h3 style="margin: 0;">💻 Projetos</h3>
             {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                <a href="{% url 'projeto_novo' %}" class="btn-add-small">+ Adicionar</a>
+                <a href="{% url 'portfolio:projeto_novo' %}" class="btn-add-small">+ Adicionar</a>
             {% endif %}
         </div>
         <table class="dash-table">
@@ -64,8 +64,8 @@
                 <td>{{ item.nome }}</td>
                 <td style="text-align: right;">
                     {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                        <a href="{% url 'projeto_editar' item.id %}" class="link-edit">Editar</a>
-                        <a href="{% url 'projeto_eliminar' item.id %}" class="link-del">Eliminar</a>
+                        <a href="{% url 'portfolio:projeto_editar' item.id %}" class="link-edit">Editar</a>
+                        <a href="{% url 'portfolio:projeto_eliminar' item.id %}" class="link-del">Eliminar</a>
                     {% endif %}
                 </td>
             </tr>
@@ -80,7 +80,7 @@
         <div class="dash-header" style="background-color: #c1ce31;">
             <h3 style="margin: 0;">📚 Unidades Curriculares</h3>
             {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                <a href="{% url 'uc_novo' %}" class="btn-add-small">+ Adicionar</a>
+                <a href="{% url 'portfolio:uc_novo' %}" class="btn-add-small">+ Adicionar</a>
             {% endif %}
         </div>
         <table class="dash-table">
@@ -89,8 +89,8 @@
                 <td>{{ item.nome }}</td>
                 <td style="text-align: right;">
                     {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                        <a href="{% url 'uc_editar' item.id %}" class="link-edit">Editar</a>
-                        <a href="{% url 'uc_eliminar' item.id %}" class="link-del">Eliminar</a>
+                        <a href="{% url 'portfolio:uc_editar' item.id %}" class="link-edit">Editar</a>
+                        <a href="{% url 'portfolio:uc_eliminar' item.id %}" class="link-del">Eliminar</a>
                     {% endif %}
                 </td>
             </tr>
@@ -105,7 +105,7 @@
         <div class="dash-header" style="background-color: #ba5a0a;">
             <h3 style="margin: 0;">🛠️ Tecnologias</h3>
             {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                <a href="{% url 'tecnologia_nova' %}" class="btn-add-small">+ Adicionar</a>
+                <a href="{% url 'portfolio:tecnologia_nova' %}" class="btn-add-small">+ Adicionar</a>
             {% endif %}
         </div>
         <table class="dash-table">
@@ -114,8 +114,8 @@
                 <td>{{ item.nome }}</td>
                 <td style="text-align: right;">
                     {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                        <a href="{% url 'tecnologia_editar' item.id %}" class="link-edit">Editar</a>
-                        <a href="{% url 'tecnologia_eliminar' item.id %}" class="link-del">Eliminar</a>
+                        <a href="{% url 'portfolio:tecnologia_editar' item.id %}" class="link-edit">Editar</a>
+                        <a href="{% url 'portfolio:tecnologia_eliminar' item.id %}" class="link-del">Eliminar</a>
                     {% endif %}
                 </td>
             </tr>
@@ -130,7 +130,7 @@
         <div class="dash-header" style="background-color: #4a5568;">
             <h3 style="margin: 0;">💼 Experiência Profissional</h3>
             {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                <a href="{% url 'experiencia_nova' %}" class="btn-add-small">+ Adicionar</a>
+                <a href="{% url 'portfolio:experiencia_nova' %}" class="btn-add-small">+ Adicionar</a>
             {% endif %}
         </div>
         <table class="dash-table">
@@ -139,8 +139,8 @@
                 <td>{{ item.cargo }} - {{ item.empresa }}</td>
                 <td style="text-align: right;">
                     {% if request.user.is_authenticated and request.user.groups.all.0.name == 'gestor-portfolio' or request.user.is_superuser %}
-                        <a href="{% url 'experiencia_editar' item.id %}" class="link-edit">Editar</a>
-                        <a href="{% url 'experiencia_eliminar' item.id %}" class="link-del">Eliminar</a>
+                        <a href="{% url 'portfolio:experiencia_editar' item.id %}" class="link-edit">Editar</a>
+                        <a href="{% url 'portfolio:experiencia_eliminar' item.id %}" class="link-del">Eliminar</a>
                     {% endif %}
                 </td>
             </tr>

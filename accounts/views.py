@@ -18,7 +18,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('dashboard') 
+            return redirect('portfolio:dashboard') 
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})
@@ -29,15 +29,24 @@ def logout_view(request):
 
 def register_view(request):
     if request.method == 'POST':
-        form = RegistroForm(request.POST)
+        form = RegistroForm(request.POST) # Usando o teu formulário personalizado
         if form.is_valid():
             user = form.save()
+            
+            # Lógica do grupo
+            from django.contrib.auth.models import Group
+            grupo_autores, created = Group.objects.get_or_create(name='autores')
+            user.groups.add(grupo_autores)
+            
             login(request, user)
-            return redirect('home')
+            # Escolhe para onde queres redirecionar (home ou lista de artigos)
+            return redirect('portfolio:home')
+        # Se o formulário for inválido, ele continua para o render abaixo
     else:
         form = RegistroForm()
+    
+    # Este return DEVE existir para que a página carregue no GET
     return render(request, 'accounts/register.html', {'form': form})
-
 
 # --- AUTENTICAÇÃO POR LINK MÁGICO ---
 
@@ -98,7 +107,7 @@ def validar_link(request, username, token):
         perfil.save()
         
         messages.success(request, f"Bem-vindo de volta, {user.first_name}!")
-        return redirect('dashboard')
+        return redirect('portfolio:dashboard')
         
     except Perfil.DoesNotExist:
         messages.error(request, "O link é inválido, expirou ou já foi utilizado.")
@@ -115,16 +124,4 @@ def dashboard_view(request):
         'user': request.user
     })
     
-    from django.contrib.auth.models import Group
-
-def register_view(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            # Garante que o grupo existe e adiciona o utilizador
-            grupo_autores, created = Group.objects.get_or_create(name='autores')
-            user.groups.add(grupo_autores)
-            login(request, user)
-            return redirect('artigos:lista')
-   
+    

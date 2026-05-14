@@ -120,7 +120,7 @@ class Formacao(models.Model):
         return self.nome
     #TFC
 class TFC(models.Model):
-    titulo = models.CharField(max_length=100)
+    titulo = models.CharField(max_length=255)
     descricao = models.TextField(max_length=255)
     link = models.URLField(blank=True)
     ano = models.PositiveIntegerField()

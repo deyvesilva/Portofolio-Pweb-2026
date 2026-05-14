@@ -2,6 +2,7 @@
 venv/
 .venv/
 env/
+.env
 
 # Ficheiros do Python (Compilados)
 __pycache__/
@@ -17,3 +18,4 @@ db.sqlite3
 
 # Pasta de Media (Uploads locais)
 media/
+
